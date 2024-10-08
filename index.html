@@ -2,20 +2,18 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta ="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/style.css">
     <title>Trabalho_Semestral</title>
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <img src="" alt="icone_marca" />            <!--icone/logo da marca  -->
-        <a href="#" class="marca">Cósmica Cria</a> <!--Nome da marca  -->
+      <nav>
         <ul class="navbar-menu">
-          <li><a href="">Sobre nós</a></li>
-          <li><a href="">Produtos</a></li>
-          <li><a href="">Processo Sustentável</a></li>
-          <li><a href="">Contato</a></li>
+          <li><img src="" alt="icone_marca" id="icone_marca"/>            <!--icone/logo da marca  --></li>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Processo Sustentável</a></li>
         </ul>
       </nav>
     </header>
@@ -148,27 +146,26 @@
       <section class="contato"> <!--Seção contato  -->
           <div class="formulario"> <!--container do formulário -->
             <h2><strong>Entre em Contato!</strong></h2>
-            <form class="preencimento"> <!--Forma do fomulário  -->
+            <form class="preenchimento"> <!--Forma do fomulário  -->
               <input type="nome" placeholder="Seu nome"> <!--lugar onde a pessoa coloca o nome dela --> <!--placeholder é só um texto que vai ficar aparecendo até a pessoa começar a digitar-->
               <input type="e-mail" placeholder="Seu E-mail"> <!--lugar onde a pessoa coloca o e-mail dela -->
               <textarea placeholder="Mensagem" class="mensagem_usuario"></textarea>  <!--lugar onde a pessoa escreve a mensagem --><!--Serve pra ter uma caixa de texto maior pra mandar a mensagem-->
               <button type="submit">Enviar</button> <!--Botão para enviar a mensagem -->
     </main>
-    <div class="floater">
-      <header class="title-footer">Footer</header>
+    <div class="footer">
+      <header class="title-footer">Cósmica Cria</header>
       <nav>
-          <a href="#sobre">Sobre</a>
-          <a href="#produtos">Produtos</a>
-          <a href="#blog">Blog</a>
-          <a href="#contato">Contato</a>
+          <a href="" id="sobre">Sobre</a>
+          <a href="" id="produtos">Produtos</a>
+          <a href="" id="blog">Blog</a>
+          <a href="" id="contato">Contato</a>
       </nav>
       <div class="newsletter">
           <input type="email" placeholder="Seu email">
-          <button>Inscrever-se</button>
-      </div>
+        <buttom><a href="" id="botao_inscrever-se">Inscrever-se</a></buttom>
       <footer>
-          <p><a href="#politica">Política de Privacidade</a> | <a href="#termos">Termos de Uso</a></p>
-          <p>© 2024 Direitos Autorais de Criação de Site</p>
+          <p><a href="#politica" id="politica">Política de Privacidade</a> | <a href="#termos" id="termos">Termos de Uso</a></p>
+          <p id="direitosAutorais">© 2024 Direitos Autorais de Criação de Site</p>
       </footer>
   </div>
   </body>
