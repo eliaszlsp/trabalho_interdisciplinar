@@ -18,15 +18,16 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #e3e6dd;
-    overflow: hidden, none;
+    overflow-x: hidden;
   }
    
   /* Banner Hero */
 #hero {
-  background-image: url("../imagens/aerial-view-fields-sunset.jpg"); /* Insira a imagem de fundo */
+  background-image: url("../imagens/olena-bohovyk-zp1Rq3OkVpM-unsplash\_1.png"); /* Insira a imagem de fundo */
   background-attachment: fixed; /* Parallax effect */
   background-size: cover;
   background-position: center;
+
   height: 100dvh;
   width: 100dvw;
   display: flex;
@@ -235,7 +236,8 @@ body {
   }
   
   .navbar-menu li a {
-    color: #e3e6dd; 
+    color: #f3f0f0;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);       
     text-decoration: none; 
     text-transform: uppercase;
     font-size: 20px; /* Aumenta o tamanho do texto */
@@ -245,7 +247,7 @@ body {
   }
   
   .navbar-menu li a:hover {
-    background-color: #373937; 
+    background-color: #61806b; 
     border-radius: 5px; 
   }
   
