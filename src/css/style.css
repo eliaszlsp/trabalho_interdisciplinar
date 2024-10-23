@@ -78,12 +78,37 @@ main{
   margin-bottom: 40px;
 }
 
+#titulo_Sobre_nos {
+  font-size: 36px;
+  text-align: center;
+}
+
+#Sobre_nos {
+  height: 400px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.sustentavel_Sobre_nos {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.container_Sobre_nos {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+
 #titulo_upcycle {
   font-size: 36px;
   text-align: center;
 }
 #Upcycle {
-  height: 400px;
+    height: 400px;
     width: 1200px;
     display: flex;
     align-items: center;
