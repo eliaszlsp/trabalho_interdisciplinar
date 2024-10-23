@@ -21,6 +21,14 @@ body {
   overflow-x: hidden;
 }
 
+main{
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 /* Banner Hero */
 #hero {
   background-image: url("../imagens/olena-bohovyk-zp1Rq3OkVpM-unsplash\_1.png"); /* Insira a imagem de fundo */
@@ -75,11 +83,11 @@ body {
   text-align: center;
 }
 #Upcycle {
-  height: 50dvh;
-  width: 95dvw;
-  display: flex;
-  align-items: center;
-  padding: 20px;
+  height: 400px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
 
 .sustentavel {
@@ -99,6 +107,7 @@ body {
 .produtos {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   gap: 30px;
 }
