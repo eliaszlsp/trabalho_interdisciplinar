@@ -21,6 +21,14 @@ body {
   overflow-x: hidden;
 }
 
+main{
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 /* Banner Hero */
 #hero {
   background-image: url("../imagens/olena-bohovyk-zp1Rq3OkVpM-unsplash\_1.png"); /* Insira a imagem de fundo */
@@ -70,16 +78,41 @@ body {
   margin-bottom: 40px;
 }
 
+#titulo_Sobre_nos {
+  font-size: 36px;
+  text-align: center;
+}
+
+#Sobre_nos {
+  height: 400px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.sustentavel_Sobre_nos {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.container_Sobre_nos {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+
 #titulo_upcycle {
   font-size: 36px;
   text-align: center;
 }
 #Upcycle {
-  height: 50dvh;
-  width: 95dvw;
-  display: flex;
-  align-items: center;
-  padding: 20px;
+    height: 400px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
 }
 
 .sustentavel {
@@ -94,11 +127,13 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  padding: 20px;
 }
 
 .produtos {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   gap: 30px;
 }
