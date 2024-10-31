@@ -356,7 +356,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 1600px;
+  width: 1320px;
 }
 
 #produtos-Section {
@@ -367,15 +367,13 @@ nav {
 }
 
 .produtos-wrapper {
-  width: 1320px;
-  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .produtos {
   display: flex;
   gap: 20px;
-
-  overflow-x: scroll;
   -ms-overflow-style: initial;
   scrollbar-width: none;
 }
@@ -388,15 +386,13 @@ nav {
   width: 310px;
   flex: none;
   position: relative;
-
   border-radius: 10px;
 }
 
-.produtos :hover {
+/* .produtos :hover {
   transform: scale(1.01);
   transition: transform 0.6s ease;
-}
-
+} */
 .produto img {
   width: 100%;
   height: 400px;
@@ -405,6 +401,7 @@ nav {
 }
 
 .produto-info {
+  height: 120px;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -426,8 +423,11 @@ nav {
   background: #61806b;
   color: white;
   border: none;
-  font-size: 24px;
+  font-size: 24pt;
   cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  left: 135px;
 }
 
 .saiba-mais:hover {
@@ -446,8 +446,10 @@ nav {
 }
 
 .produto-botao {
-  align-self: self-end;
-  margin-right: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right:100px;
   gap: 5px;
 }
 .nav-btn:hover {
