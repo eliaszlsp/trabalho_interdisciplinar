@@ -1,23 +1,38 @@
 @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-logo,
-    .footer-menu,
-    .footer-social {
-      max-width: 100%;
-      text-align: center;
-    }
-  
-    .footer-menu ul {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-  
-    .footer-social .social-icons {
-      justify-content: center;
-    }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .footer-logo,
+  .footer-menu,
+  .footer-social {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-social .social-icons {
+    justify-content: center;
+  }
+
+  .produtos {
+    flex-direction: column;
+  }
+
+  .produto,
+  .material {
+    width: 100%;
+  }
+
+  .preenchimento input[type="nome"],
+  .preenchimento input[type="e-mail"],
+  .mensagem_usuario {
+    width: 100%;
+  }
+}
