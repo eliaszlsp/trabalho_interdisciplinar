@@ -65,7 +65,7 @@ nextButton.addEventListener("click", () => {
     left: 1150,
     behavior: "smooth",
   });
-});
+}); 
 // botões para navegação entre os cards esquerda
 const prevButton = document.getElementById("prev");
 prevButton.addEventListener("click", () => {
@@ -128,6 +128,7 @@ produtoButton.forEach((button, index) => {
 const nossaCausa = document.querySelectorAll(".icon-container");
 const textNossaCausa = document.querySelector(".texto_Nossa_causa");
 const textCenter = document.querySelector('.circle-text');
+const title = document.querySelector('title');
 const itens = [
     "design",
     "make",
@@ -202,18 +203,14 @@ const title1 = document.querySelector('title1');
 const text1 = document.querySelector('text1');
 const title2 = document.querySelector('title2');
 const text2 = document.querySelector('text2');
-textNossaCausa.forEach((icon, index) => {
-
-});
-
-
-nossaCausa.forEach((icon) => {
-    icon.addEventListener("mouseouver", (event) => {
-        event.preventDefault();
-        document.querySelectorAll(`.text${texts[index].id}`).forEach(hover => hover.classList.remove("active"));
-
-        icon.classList.add("active");
-
-        textsFun();
-    });
+nossaCausa.forEach((icon, index) => {
+  icon.addEventListener("mouseover", (event) => {
+    event.preventDefault();
+    if(itens[index]){
+      
+      textNossaCausa.textContent = texts[index].text;
+      textCenter.textContent = texts[index].centerText;
+      title.textContent = texts[index].title;
+    }
+  });
 });
