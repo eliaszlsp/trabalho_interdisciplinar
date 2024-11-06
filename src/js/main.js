@@ -62,7 +62,7 @@ cardsDisplay(infosCards);
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", () => {
   cards.scrollBy({
-    left: 700,
+    left: 1150,
     behavior: "smooth",
   });
 });
@@ -70,7 +70,7 @@ nextButton.addEventListener("click", () => {
 const prevButton = document.getElementById("prev");
 prevButton.addEventListener("click", () => {
   cards.scrollBy({
-    left: -700,
+    left: -1150,
     behavior: "smooth",
   });
 });
@@ -78,27 +78,21 @@ prevButton.addEventListener("click", () => {
 // Botão descrição dos produtos
 const maisCards = [
   {
-    title: "Lorem1",
     text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
   },
   {
-    title: "Lorem2",
     text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
   },
   {
-    title: "Lorem3",
     text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
   },
   {
-    title: "Lorem4",
     text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
   },
   {
-    title: "Lorem5",
     text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
   },
   {
-    title: "Lorem6",
     text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
   },
 ];
@@ -107,7 +101,6 @@ const produtoInfo = document.querySelectorAll(".produto-info");
 const titleProduct = document.querySelectorAll(".product-title");
 const textProduct = document.querySelectorAll(".product-text");
 const product = document.querySelectorAll(".produto-info");
-// const product = document.querySelectorAll('.texto-produtos');
 
 produtoButton.forEach((button, index) => {
   button.addEventListener("click", (event) => {
@@ -115,24 +108,112 @@ produtoButton.forEach((button, index) => {
     const infoContainer = product[index];
     const isOpened = infoContainer.classList.contains("expanded");
     if (isOpened) {
-      infoContainer.style.height = "120px";
-      titleProduct[index].textContent = infosCards[index].title;
-      textProduct[index].textContent = infosCards[index].descricao;
       infoContainer.classList.remove("expanded");
+      textProduct[index].textContent = infosCards[index].descricao;
+      infoContainer.style.height = "120px";
       button.style.transform = "rotate(0deg)";
     } else {
-      titleProduct[index].textContent = maisCards[index].title;
+      infoContainer.classList.add("expanded");
       textProduct[index].textContent = maisCards[index].text;
       infoContainer.style.height = "200px";
       infoContainer.style.overflow = "hidden";
-      void infoContainer.offsetHeight;
       infoContainer.style.height = "100%";
       button.style.transform = "rotate(45deg)";
-      infoContainer.classList.add("expanded");
-      titleProduct[index].style.textAlign = "center";
     }
-    infoContainer.style.transition = "height 0.6s ease";
-    button.style.transition = "all 0.5s ease";
   });
 });
 // Fim section cards
+
+// inicio Nossa Causa
+const nossaCausa = document.querySelectorAll(".icon-container");
+const textNossaCausa = document.querySelector(".texto_Nossa_causa");
+const textCenter = document.querySelector('.circle-text');
+const itens = [
+    "design",
+    "make",
+    "package",
+    "use",
+    "recycle"
+];
+const texts = [
+    {
+        id: 1, 
+        title: "Texto 1", 
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        centerText: "1Lorem ipsum dolor sit amet, consectetur"
+    }, 
+    {
+        id: 2, 
+        title: "Texto 2", 
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        centerText: "2Lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+        id: 3, 
+        title: "Texto 3", 
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        centerText: "3Lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+        id: 4, 
+        title: "Texto 4", 
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        centerText: "4Lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+        id: 5, 
+        title: "Texto 5", 
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        centerText: "5Lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+        id: 6, 
+        title: "Texto 1", 
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        centerText: "6Lorem ipsum dolor sit amet, consectetur"
+    }, 
+    {
+        id: 7, 
+        title: "Texto 2", 
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        centerText: "Lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+        id: 8, 
+        title: "Texto 3", 
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        centerText: "Lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+        id: 9, 
+        title: "Texto 4", 
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        centerText: "Lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+        id: 10, 
+        title: "Texto 5", 
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        centerText: "Lorem ipsum dolor sit amet, consectetur"
+    }
+];
+
+const title1 = document.querySelector('title1');
+const text1 = document.querySelector('text1');
+const title2 = document.querySelector('title2');
+const text2 = document.querySelector('text2');
+textNossaCausa.forEach((icon, index) => {
+
+});
+
+
+nossaCausa.forEach((icon) => {
+    icon.addEventListener("mouseouver", (event) => {
+        event.preventDefault();
+        document.querySelectorAll(`.text${texts[index].id}`).forEach(hover => hover.classList.remove("active"));
+
+        icon.classList.add("active");
+
+        textsFun();
+    });
+});
