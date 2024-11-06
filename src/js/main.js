@@ -140,77 +140,94 @@ const texts = [
     {
         id: 1, 
         title: "Texto 1", 
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        text: "1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
         centerText: "1Lorem ipsum dolor sit amet, consectetur"
     }, 
     {
         id: 2, 
         title: "Texto 2", 
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        text: "2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
         centerText: "2Lorem ipsum dolor sit amet, consectetur"
     },
     {
         id: 3, 
         title: "Texto 3", 
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        text: "3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
         centerText: "3Lorem ipsum dolor sit amet, consectetur"
     },
     {
         id: 4, 
         title: "Texto 4", 
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        text: "4Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
         centerText: "4Lorem ipsum dolor sit amet, consectetur"
     },
     {
         id: 5, 
         title: "Texto 5", 
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        text: "5Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
         centerText: "5Lorem ipsum dolor sit amet, consectetur"
     },
     {
         id: 6, 
-        title: "Texto 1", 
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        title: "Texto 6", 
+        text: "6Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
         centerText: "6Lorem ipsum dolor sit amet, consectetur"
     }, 
     {
         id: 7, 
-        title: "Texto 2", 
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        title: "Texto 7", 
+        text: "7Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
         centerText: "Lorem ipsum dolor sit amet, consectetur"
     },
     {
         id: 8, 
-        title: "Texto 3", 
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        title: "Texto 8", 
+        text: "8Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
         centerText: "Lorem ipsum dolor sit amet, consectetur"
     },
     {
         id: 9, 
-        title: "Texto 4", 
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        title: "Texto 9", 
+        text: "9Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
         centerText: "Lorem ipsum dolor sit amet, consectetur"
     },
     {
         id: 10, 
-        title: "Texto 5", 
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+        title: "Texto 10", 
+        text: "10Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
         centerText: "Lorem ipsum dolor sit amet, consectetur"
     }
 ];
-
-const title1 = document.querySelector('title1');
-const text1 = document.querySelector('text1');
-const title2 = document.querySelector('title2');
-const text2 = document.querySelector('text2');
+const itemToTextIds = {
+  design: [1, 2], // IDs correspondentes aos textos
+  make: [3, 4],
+  package: [5, 6],
+  use: [7, 8],
+  recycle: [9, 10]
+};
+const title1 = document.querySelector('.title1');
+const text1 = document.querySelector('.text1');
+const title2 = document.querySelector('.title2');
+const text2 = document.querySelector('.text2');
 nossaCausa.forEach((icon, index) => {
   icon.addEventListener("mouseover", (event) => {
     event.preventDefault();
-    if(itens[index]){
-      
-      textNossaCausa.textContent = texts[index].text;
-      textCenter.textContent = texts[index].centerText;
-      title.textContent = texts[index].title;
+    const itemName = itens[index]; // Pega o nome do item correspondente ao índice
+    const textIds = itemToTextIds[itemName]; // Obtém os IDs de texto correspondentes
+
+    if (textIds) {
+      const text1Id = textIds[0] - 1; // Subtrai 1 para usar como índice no array texts
+      const text2Id = textIds[1] - 1; // Subtrai 1 para usar como índice no array texts
+
+      if (text1Id >= 0 && text1Id < texts.length) {
+        textCenter.textContent = texts[text1Id].centerText;
+        text1.textContent = texts[text1Id].text;
+      }
+      if (text2Id >= 0 && text2Id < texts.length) {
+        text2.textContent = texts[text2Id].text;
+        title1.textContent = texts[text1Id].title;
+        title2.textContent = texts[text2Id].title;
+      }
     }
   });
 });
