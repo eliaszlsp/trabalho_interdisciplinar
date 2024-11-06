@@ -93,7 +93,7 @@ main {
 }
 
 #Sobre_nos {
-  height: 400px;
+  height: 100vh;
   width: 1200px;
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@ main {
   text-align: center;
 }
 #Upcycle {
-  height: 400px;
+  height: 100vh;
   width: 1200px;
   display: flex;
   align-items: center;
@@ -278,6 +278,7 @@ nav {
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  height: 100vh;
 }
 
 .produtos {
