@@ -171,40 +171,42 @@ const texts = [
         id: 6, 
         title: "Texto 6", 
         text: "6Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "6Lorem ipsum dolor sit amet, consectetur"
     }, 
     {
         id: 7, 
         title: "Texto 7", 
-        text: "7Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "Lorem ipsum dolor sit amet, consectetur"
+        text: "7Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?"
     },
     {
         id: 8, 
         title: "Texto 8", 
         text: "8Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "Lorem ipsum dolor sit amet, consectetur"
     },
     {
         id: 9, 
         title: "Texto 9", 
         text: "9Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "Lorem ipsum dolor sit amet, consectetur"
     },
     {
         id: 10, 
         title: "Texto 10", 
         text: "10Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "Lorem ipsum dolor sit amet, consectetur"
     }
 ];
 const itemToTextIds = {
-  design: [1, 2], // IDs correspondentes aos textos
+  design: [1, 2], 
   make: [3, 4],
   package: [5, 6],
   use: [7, 8],
   recycle: [9, 10]
 };
+const center = [
+  { id: 1, text: "1Lorem ipsum dolor sit amet, consectetur" },
+  { id: 2, text: "2Lorem ipsum dolor sit amet, consectetur" },
+  { id: 3, text: "3Lorem ipsum dolor sit amet, consectetur" },
+  { id: 4, text: "4Lorem ipsum dolor sit amet, consectetur" },
+  { id: 5, text: "5Lorem ipsum dolor sit amet, consectetur" },
+]
 const title1 = document.querySelector('.title1');
 const text1 = document.querySelector('.text1');
 const title2 = document.querySelector('.title2');
@@ -212,12 +214,13 @@ const text2 = document.querySelector('.text2');
 nossaCausa.forEach((icon, index) => {
   icon.addEventListener("mouseover", (event) => {
     event.preventDefault();
-    const itemName = itens[index]; // Pega o nome do item correspondente ao índice
-    const textIds = itemToTextIds[itemName]; // Obtém os IDs de texto correspondentes
+    const itemName = itens[index];
+    const textIds = itemToTextIds[itemName];
+    const centerText = center[index];
 
     if (textIds) {
-      const text1Id = textIds[0] - 1; // Subtrai 1 para usar como índice no array texts
-      const text2Id = textIds[1] - 1; // Subtrai 1 para usar como índice no array texts
+      const text1Id = textIds[0] - 1;
+      const text2Id = textIds[1] - 1;
 
       if (text1Id >= 0 && text1Id < texts.length) {
         textCenter.textContent = texts[text1Id].centerText;
