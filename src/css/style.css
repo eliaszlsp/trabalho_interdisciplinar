@@ -418,7 +418,20 @@ nav {
   border-radius: 50%;
   font-size: 24px;
 }
-
+.icon{
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.icon:hover{
+  transform: scale(1.1);
+}
+.text1, .text2, .title1, .title2{
+  filter: blur(0px);
+  transition: all 0.3s ease-in-out;
+}
+.show{
+  filter: blur(5px);
+}
 .circulo_sustentavel .label {
   margin-top: 10px;
   font-weight: 500;
