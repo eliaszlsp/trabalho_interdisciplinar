@@ -12,6 +12,7 @@
   body {
     width: 100%;
     overflow-x: hidden;
+    background-color: var(--color-cosmica-light);
   }
   nav {
     display: flex;
@@ -35,24 +36,6 @@
     margin: 0px 10px;
     margin-top: 8px;
     z-index: 2;
-  }
-
-  #Sobre_nos {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 100%;
-  }
-
-  #Upcycle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
-  }
-  .container_upcycle img {
-    width: 50%;
   }
 
   .menu-hamburguer {
@@ -97,10 +80,76 @@
     background-position: center;
   }
 
-  body {
-    background-color: var(--color-cosmica-light);
+  #Sobre_nos {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
   }
 
+  #Upcycle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .container_upcycle {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sustentavel {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+  }
+
+  #produtos-Section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    height: fit-content;
+    width: 100vw;
+  }
+
+  .produtos-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+
+    transition: all 1.5s ease-in-out;
+  }
+
+  .produtos {
+    flex-direction: row;
+    width: 100vh;
+  }
+
+  .produto {
+    width: 300px;
+
+    flex: none;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 400px;
+  }
+  .produto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  /* Footer */
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -123,15 +172,6 @@
     justify-content: center;
   }
 
-  .produtos {
-    flex-direction: column;
-  }
-
-  .produto,
-  .material {
-    width: 100%;
-  }
-
   .preenchimento input[type="nome"],
   .preenchimento input[type="e-mail"],
   .mensagem_usuario {
@@ -145,5 +185,22 @@
     margin-top: 10px; /* Espaçamento superior */
     color: #e3e6dd;
     text-align: center;
+  }
+
+  #Nossa_causa {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100dvw;
+  }
+
+  .produto {
+    width: 250px;
+
+    flex: none;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 300px;
   }
 }
