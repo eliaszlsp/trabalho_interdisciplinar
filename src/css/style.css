@@ -35,15 +35,18 @@ main {
   align-items: center;
 }
 
+#logo-menu-responsivo {
+  display: none;
+}
 /* Banner Hero */
 #hero {
-  background-image: url("../imagens/olena-bohovyk-zp1Rq3OkVpM-unsplash\_1.png"); /* Insira a imagem de fundo */
+  background-image: url("../imagens/backgroundHero.png"); /* Insira a imagem de fundo */
   background-attachment: fixed; /* Parallax effect */
   background-size: cover;
   background-position: center;
 
   height: 100dvh;
-  width: 100dvw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,6 +222,7 @@ main {
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .preenchimento button:hover {
@@ -365,6 +369,7 @@ nav {
   border-radius: 50%;
   cursor: pointer;
   font-size: 20px;
+  transition: all 1.5s ease-in-out;
 }
 
 .produto-botao {
@@ -418,18 +423,21 @@ nav {
   border-radius: 50%;
   font-size: 24px;
 }
-.icon{
+.icon {
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
-.icon:hover{
+.icon:hover {
   transform: scale(1.1);
 }
-.text1, .text2, .title1, .title2{
+.text1,
+.text2,
+.title1,
+.title2 {
   filter: blur(0px);
   transition: all 0.3s ease-in-out;
 }
-.show{
+.show {
   filter: blur(5px);
 }
 .circulo_sustentavel .label {
@@ -549,6 +557,9 @@ nav {
   gap: 10px;
 }
 
+.footer-social a:hover {
+  opacity: 0.7;
+}
 .footer-social .social-icons a img {
   width: 30px; /* Tamanho dos ícones sociais */
 }
@@ -557,11 +568,11 @@ nav {
   margin-bottom: 10px;
 }
 
-.footer-social{
+.footer-social {
   position: relative;
 }
 
-.propaganda{
+.propaganda {
   margin-top: 50px;
   position: absolute;
   left: -80%;

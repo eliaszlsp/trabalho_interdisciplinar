@@ -1,4 +1,106 @@
+:root {
+  --color-background: #e3e6dd;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-cosmica-dark-green: #61806b;
+  --color-cosmica-light-green: #a0b491;
+  --color-cosmica-gray: #373937;
+  --color-cosmica-light: #e3e6dd;
+}
+
 @media (max-width: 768px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100dvh;
+  }
+
+  .slogan {
+    font-size: 32px; /* Ajuste o tamanho da fonte do slogan */
+    margin-top: 10px; /* Espaçamento superior */
+    color: #e3e6dd;
+    text-align: center;
+  }
+  #logo-menu-responsivo {
+    height: 100%;
+    width: 100px;
+    fill: #333;
+    display: nome;
+    margin: 0px 10px;
+    margin-top: 8px;
+    z-index: 2;
+  }
+
+  #Sobre_nos {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #Upcycle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+  }
+  .container_upcycle img {
+    width: 50%;
+  }
+
+  .menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    cursor: pointer;
+    margin: 10px 10px;
+  }
+  .menu-hamburguer .linha {
+    width: 32px;
+    height: 3px;
+    background-color: var(--color-background);
+    margin: 4px 0;
+  }
+
+  .hamburger-nav {
+    top: 0px;
+    position: absolute;
+    display: nome;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-cosmica-gray);
+    width: 100%;
+    height: 100dvh;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .hamburger-nav.ativo {
+    display: flex;
+    opacity: 1;
+  }
+
+  #hero img {
+    width: 100%;
+  }
+  #hero {
+    background-attachment: fixed; /* Parallax effect */
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-position: center;
+  }
+
+  body {
+    background-color: var(--color-cosmica-light);
+  }
+
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -34,5 +136,14 @@
   .preenchimento input[type="e-mail"],
   .mensagem_usuario {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan {
+    font-size: 16px; /* Ajuste o tamanho da fonte do slogan */
+    margin-top: 10px; /* Espaçamento superior */
+    color: #e3e6dd;
+    text-align: center;
   }
 }

@@ -65,7 +65,7 @@ nextButton.addEventListener("click", () => {
     left: 1150,
     behavior: "smooth",
   });
-}); 
+});
 // botões para navegação entre os cards esquerda
 const prevButton = document.getElementById("prev");
 prevButton.addEventListener("click", () => {
@@ -127,78 +127,72 @@ produtoButton.forEach((button, index) => {
 // inicio Nossa Causa
 const nossaCausa = document.querySelectorAll(".icon-container");
 const textNossaCausa = document.querySelector(".texto_Nossa_causa");
-const textCenter = document.querySelector('.circle-text');
-const title = document.querySelector('title');
-const itens = [
-    "design",
-    "make",
-    "package",
-    "use",
-    "recycle"
-];
+const textCenter = document.querySelector(".circle-text");
+const title = document.querySelector("title");
+const itens = ["design", "make", "package", "use", "recycle"];
 const texts = [
-    {
-        id: 1, 
-        title: "Texto 1", 
-        text: "1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "1Lorem ipsum dolor sit amet, consectetur"
-    }, 
-    {
-        id: 2, 
-        title: "Texto 2", 
-        text: "2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-    },
-    {
-        id: 3, 
-        title: "Texto 3", 
-        text: "3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "2Lorem ipsum dolor sit amet, consectetur"
-    },
-    {
-        id: 4, 
-        title: "Texto 4", 
-        text: "4Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-    },
-    {
-        id: 5, 
-        title: "Texto 5", 
-        text: "5Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "3Lorem ipsum dolor sit amet, consectetur"
-    },
-    {
-        id: 6, 
-        title: "Texto 6", 
-        text: "6Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-    }, 
-    {
-        id: 7, 
-        title: "Texto 7", 
-        text: "7Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "4Lorem ipsum dolor sit amet, consectetur"
-    },
-    {
-        id: 8, 
-        title: "Texto 8", 
-        text: "8Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-    },
-    {
-        id: 9, 
-        title: "Texto 9", 
-        text: "9Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "5Lorem ipsum dolor sit amet, consectetur"
-    },
-    {
-        id: 10, 
-        title: "Texto 10", 
-        text: "10Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-    }
+  {
+    id: 1,
+    title: "Texto 1",
+    text: "1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+    centerText: "1Lorem ipsum dolor sit amet, consectetur",
+  },
+  {
+    id: 2,
+    title: "Texto 2",
+    text: "2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+  },
+  {
+    id: 3,
+    title: "Texto 3",
+    text: "3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+    centerText: "2Lorem ipsum dolor sit amet, consectetur",
+  },
+  {
+    id: 4,
+    title: "Texto 4",
+    text: "4Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+  },
+  {
+    id: 5,
+    title: "Texto 5",
+    text: "5Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+    centerText: "3Lorem ipsum dolor sit amet, consectetur",
+  },
+  {
+    id: 6,
+    title: "Texto 6",
+    text: "6Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+  },
+  {
+    id: 7,
+    title: "Texto 7",
+    text: "7Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+    centerText: "4Lorem ipsum dolor sit amet, consectetur",
+  },
+  {
+    id: 8,
+    title: "Texto 8",
+    text: "8Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+  },
+  {
+    id: 9,
+    title: "Texto 9",
+    text: "9Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+    centerText: "5Lorem ipsum dolor sit amet, consectetur",
+  },
+  {
+    id: 10,
+    title: "Texto 10",
+    text: "10Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
+  },
 ];
 const itemToTextIds = {
-  design: [1, 2], 
+  design: [1, 2],
   make: [3, 4],
   package: [5, 6],
   use: [9, 10],
-  recycle: [7, 8]
+  recycle: [7, 8],
 };
 const center = [
   { id: 1, text: "1Lorem ipsum dolor sit amet, consectetur" },
@@ -206,45 +200,55 @@ const center = [
   { id: 3, text: "3Lorem ipsum dolor sit amet, consectetur" },
   { id: 4, text: "4Lorem ipsum dolor sit amet, consectetur" },
   { id: 5, text: "5Lorem ipsum dolor sit amet, consectetur" },
-]
-const title1 = document.querySelector('.title1');
-const text1 = document.querySelector('.text1');
-const title2 = document.querySelector('.title2');
-const text2 = document.querySelector('.text2');
+];
+const title1 = document.querySelector(".title1");
+const text1 = document.querySelector(".text1");
+const title2 = document.querySelector(".title2");
+const text2 = document.querySelector(".text2");
 
 nossaCausa.forEach((icon, index) => {
   icon.addEventListener("mouseover", (event) => {
     event.preventDefault();
-    
-    text1.classList.add('show');
-    text2.classList.add('show');
-    title1.classList.add('show');
-    title2.classList.add('show');
+
+    text1.classList.add("show");
+    text2.classList.add("show");
+    title1.classList.add("show");
+    title2.classList.add("show");
 
     const itemName = itens[index];
     const textIds = itemToTextIds[itemName];
 
-    if (textIds) { // Testa se o Text id existe (se não for undefined ou null)
+    if (textIds) {
+      // Testa se o Text id existe (se não for undefined ou null)
       const text1Id = textIds[0] - 1;
       const text2Id = textIds[1] - 1;
 
       setTimeout(() => {
-
         if (text1Id >= 0 && text1Id < texts.length) {
           textCenter.textContent = texts[text1Id].centerText;
           text1.textContent = texts[text1Id].text;
-          text1.classList.add('show');
+          text1.classList.add("show");
         }
         if (text2Id >= 0 && text2Id < texts.length) {
           text2.textContent = texts[text2Id].text;
           title1.textContent = texts[text1Id].title;
           title2.textContent = texts[text2Id].title;
         }
-        text1.classList.remove('show');
-        text2.classList.remove('show');
-        title1.classList.remove('show');
-        title2.classList.remove('show');
-      }, 300)
+        text1.classList.remove("show");
+        text2.classList.remove("show");
+        title1.classList.remove("show");
+        title2.classList.remove("show");
+      }, 300);
     }
+  });
+});
+
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const menuHamburguer = document.getElementById("menuHamburguer");
+  const menu = document.getElementsByClassName("hamburger-nav")[0];
+
+  menuHamburguer.addEventListener("click", () => {
+    menu.classList.toggle("ativo");
   });
 });
