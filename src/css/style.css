@@ -109,6 +109,16 @@ main {
   padding: 10px;
 }
 
+.fraseAutoridade {
+  background-color: #61806b;
+  font-size: 40px;
+  color: white;
+  width: 100%;
+  padding: 75px;
+  text-align: center;
+}
+
+
 #titulo_upcycle {
   font-size: 36px;
   text-align: center;
@@ -488,7 +498,7 @@ nav {
 
 /* Estilo geral do footer */
 .footer {
-  background-color: #e3e6dd; /* Cor de fundo */
+  background-color: #373937; /* Cor de fundo */
   padding: 40px;
   display: flex;
   justify-content: space-between;
@@ -515,7 +525,7 @@ nav {
 
 .footer-logo p {
   font-size: 14px;
-  color: #333;
+  color: #fff
 }
 
 .footer-menu h3,
@@ -523,6 +533,7 @@ nav {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .footer-menu ul {
@@ -538,6 +549,7 @@ nav {
   color: #333;
   text-decoration: none;
   font-size: 16px;
+  color: #fff;
 }
 
 .footer-menu ul li a:hover {
