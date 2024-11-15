@@ -1,3 +1,5 @@
+@import url("../fonts/fonts.css");
+
 :root {
   --color-background: #e3e6dd;
   --color-white: #fff;
@@ -6,6 +8,19 @@
   --color-cosmica-light-green: #a0b491;
   --color-cosmica-gray: #373937;
   --color-cosmica-light: #e3e6dd;
+}
+@media (max-width: 1280px) {
+  #hero img {
+    max-width: 500px;
+    max-height: auto;
+    object-fit: cover;
+  }
+  .slogan {
+    font-size: 25px; /* Ajuste o tamanho da fonte do slogan */
+    margin-top: 0.625rem; /* Espaçamento superior */
+    color: #e3e6dd;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {

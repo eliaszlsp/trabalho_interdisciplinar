@@ -3,6 +3,8 @@ padroes de fonte e tamanhos
 implementar scroll no produtos
  */
 
+@import url("../fonts/fonts.css");
+
 :root {
   --color-background: #e3e6dd;
   --color-white: #fff;
@@ -37,10 +39,12 @@ header {
 
 /* Estilo geral */
 body {
-  font-family: "Roca Two", Radio;
+  /*  font-family: "Roca Two", Radio; */
   box-sizing: border-box;
   background-color: #e3e6dd;
   overflow-x: hidden;
+  width: 100%dvh;
+  font-family: "Cronos Pro Regular", sans-serif;
 }
 
 main {
@@ -97,19 +101,24 @@ main {
   background-color: #ffffff;
 }
 
-.banner_principal h2 {
-  font-size: 2.25rem;
-  margin-bottom: 2.5rem;
-}
-
 #titulo_Sobre_nos {
   font-size: 2.25rem;
   text-align: center;
 }
 
-#Sobre_nos {
+#secao_sobre_nos {
+  width: 100%;
   height: 100vh;
+  display: flex;
+
+  background-color: var(--color-cosmica-dark-green);
+  align-self: center;
+  justify-content: center;
+}
+
+#Sobre_nos {
   width: 75rem;
+  height: 100%;
   display: flex;
   align-items: center;
   padding: 1.25rem;
@@ -121,28 +130,21 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  height: fit-content;
-  width: fit-content;
+  height: 100%;
+  color: #000;
+  font-weight: 400;
 }
-.container_texto_imagem_Sobre_nos .sustentavel_Sobre_nos {
+.container_texto_imagem_Sobre_nos .texto_sustentavel_Sobre_nos {
   display: flex;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 31%,
-    rgba(223, 213, 185, 1) 100%
-  );
+  text-align: left;
   height: 100%;
   align-items: center;
   justify-content: center;
-  border-radius: 20px 0px 0px 20px;
+  padding: 20px;
 }
-.sustentavel_Sobre_nos {
+.texto_sustentavel_Sobre_nos {
   display: flex;
   gap: 3.125rem;
-
   flex-direction: column;
   width: 50%;
   text-align: center;
@@ -150,16 +152,14 @@ main {
 }
 
 .container_Sobre_nos {
-  width: 50%;
   text-align: center;
+  width: max-content;
+  height: 100%;
   /* margin: auto; */
 }
 .container_Sobre_nos img {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 0px 10px 10px 0px;
 }
 
