@@ -134,6 +134,7 @@
     flex-direction: row;
     gap: 20px;
     width: 100%;
+    overflow: scroll;
 
     transition: all 1.5s ease-in-out;
   }
@@ -157,6 +158,29 @@
     height: 100%;
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
+  }
+
+  #Nossa_causa {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100dvw;
+    gap: 100px;
+  }
+
+  .texto_Nossa_causa {
+    width: 100%;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .texto_Nossa_causa p {
+    text-align: left;
+  }
+
+  .produto {
+    margin-left: 8px;
   }
 
   /* Footer */
@@ -258,16 +282,6 @@
     justify-content: center;
     align-items: center;
     /* animation: spin 60s linear infinite; */
-  }
-  .texto_Nossa_causa {
-    width: 100%;
-    margin: 0px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .texto_Nossa_causa p {
-    text-align: left;
   }
 
   .produto {
