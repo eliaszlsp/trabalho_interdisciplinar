@@ -109,6 +109,16 @@
     padding: 10px;
   }
 
+  .texto_Nossa_causa {
+    margin: 0px;
+    width: 100%;
+  }
+
+  .texto_Nossa_causa p {
+    margin-top: 20px;
+    text-align: left;
+  }
+
   #produtos-Section {
     display: flex;
     flex-direction: column;
@@ -187,20 +197,91 @@
     text-align: center;
   }
 
+  .design {
+    top: 18%;
+    left: 93%;
+    transform: translate(-120%, -46%);
+  }
+  .make {
+    top: 71%;
+    right: 21px;
+    transform: translate(50%, -50%);
+  }
+
+  .package {
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  .use {
+    top: 18%;
+    left: 29%;
+    transform: translate(-120%, -40%);
+  }
+  .recycle {
+    top: 71%;
+    left: 21%;
+    transform: translate(-120%, -40%);
+  }
+
+  .circulo_sustentavel .icon {
+    background-color: #61806b;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 16px;
+  }
+
+  .circle-text {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  main {
+    padding: 20px;
+  }
+
   #Nossa_causa {
     display: flex;
     flex-direction: column;
     padding: 10px;
     width: 100dvw;
+    gap: 100px;
+  }
+
+  .circulo_sustentavel {
+    position: relative;
+    width: calc(492px / 1.5);
+    height: calc(492px / 1.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: spin 60s linear infinite; */
+  }
+  .texto_Nossa_causa {
+    width: 100%;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .texto_Nossa_causa p {
+    text-align: left;
   }
 
   .produto {
     width: 250px;
+    margin-left: 8px;
 
     flex: none;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
     height: 300px;
+  }
+
+  .produto-botao {
+    margin-right: 8px;
   }
 }
