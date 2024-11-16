@@ -244,11 +244,9 @@ nossaCausa.forEach((icon, index) => {
 });
 
 // script.js
-document.addEventListener("DOMContentLoaded", () => {
-  const menuHamburguer = document.getElementById("menuHamburguer");
-  const menu = document.getElementsByClassName("hamburger-nav")[0];
-
-  menuHamburguer.addEventListener("click", () => {
-    menu.classList.toggle("ativo");
+document
+  .getElementById("menuHamburguer")
+  .addEventListener("click", function () {
+    this.classList.toggle("ativo");
+    document.querySelector(".hamburger-nav").classList.toggle("ativo");
   });
-});
