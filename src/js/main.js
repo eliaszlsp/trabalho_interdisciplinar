@@ -1,3 +1,46 @@
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+const sourceDiv = document.querySelector(".source-div");
+const targetDiv = document.querySelector(".nav");
+const image = document.querySelector(".logo-type");
+const logoNav = document.querySelector(".logo");
+const linksNav = document.querySelectorAll(".navbar-menu li a");
+console.log(linksNav);
+// Escuta o evento de scroll
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if(scrollTop >= 1035){
+      if (scrollTop > 0 && scrollTop > lastScrollTop) {
+        // Usuário está rolando para baixo
+        if (!targetDiv.contains(image)) {
+          // targetDiv.insertBefore(image, targetDiv.firstChild); // Move a imagem para o targetDiv
+          logoNav.classList.add('scroll');
+          logoNav.style.display = 'block';
+          linksNav.forEach((element) =>{
+            element.style.color = '#333';
+            element.style.textShadow = '0 0 0'; 
+          })
+        }
+      } 
+      header.classList.add('scroll-header');
+    } else if (scrollTop < 1035){
+      header.classList.remove('scroll-header');
+      logoNav.style.display = 'none';
+      linksNav.forEach((element) =>{
+        element.style.color = '#f3f0f0';
+        element.style.textShadow = '0px 0px 10px rgb(0, 0, 0)'; 
+      })
+      if (scrollTop === 0) {
+        // Usuário chegou no topo da página
+        if (!sourceDiv.contains(image)) {
+          // sourceDiv.insertBefore(image, sourceDiv.firstChild); // Move a imagem de volta para o sourceDiv
+          logoNav.classList.remove('scroll');
+        }
+      }
+    }
+    lastScrollTop = scrollTop;
+});
 // criando cards dinamicamente
 const cards = document.querySelector(".produtos-wrapper");
 const infosCards = [
@@ -125,126 +168,116 @@ produtoButton.forEach((button, index) => {
 // Fim section cards
 
 // inicio Nossa Causa
-const nossaCausa = document.querySelectorAll(".icon-container");
+// const nossaCausa = document.querySelectorAll(".icon");
 const textNossaCausa = document.querySelector(".texto_Nossa_causa");
 const textCenter = document.querySelector('.circle-text');
-const title = document.querySelector('title');
-const itens = [
-    "design",
-    "make",
-    "package",
-    "use",
-    "recycle"
-];
-const texts = [
-    {
-        id: 1, 
-        title: "Texto 1", 
-        text: "1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "1Lorem ipsum dolor sit amet, consectetur"
-    }, 
-    {
-        id: 2, 
-        title: "Texto 2", 
-        text: "2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-    },
-    {
-        id: 3, 
-        title: "Texto 3", 
-        text: "3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "2Lorem ipsum dolor sit amet, consectetur"
-    },
-    {
-        id: 4, 
-        title: "Texto 4", 
-        text: "4Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-    },
-    {
-        id: 5, 
-        title: "Texto 5", 
-        text: "5Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "3Lorem ipsum dolor sit amet, consectetur"
-    },
-    {
-        id: 6, 
-        title: "Texto 6", 
-        text: "6Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-    }, 
-    {
-        id: 7, 
-        title: "Texto 7", 
-        text: "7Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "4Lorem ipsum dolor sit amet, consectetur"
-    },
-    {
-        id: 8, 
-        title: "Texto 8", 
-        text: "8Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-    },
-    {
-        id: 9, 
-        title: "Texto 9", 
-        text: "9Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-        centerText: "5Lorem ipsum dolor sit amet, consectetur"
-    },
-    {
-        id: 10, 
-        title: "Texto 10", 
-        text: "10Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ipsum officia cum assumenda accusantium expedita aliquid quod molestias, maxime nam fuga, atque quos dolorum. Voluptatem atneque dolorum nulla quis?",
-    }
-];
-const itemToTextIds = {
-  design: [1, 2], 
-  make: [3, 4],
-  package: [5, 6],
-  use: [9, 10],
-  recycle: [7, 8]
-};
-const center = [
-  { id: 1, text: "1Lorem ipsum dolor sit amet, consectetur" },
-  { id: 2, text: "2Lorem ipsum dolor sit amet, consectetur" },
-  { id: 3, text: "3Lorem ipsum dolor sit amet, consectetur" },
-  { id: 4, text: "4Lorem ipsum dolor sit amet, consectetur" },
-  { id: 5, text: "5Lorem ipsum dolor sit amet, consectetur" },
-]
 const title1 = document.querySelector('.title1');
 const text1 = document.querySelector('.text1');
 const title2 = document.querySelector('.title2');
 const text2 = document.querySelector('.text2');
 
+// Defina a lista de ícones a partir de seus elementos DOM
+const nossaCausa = document.querySelectorAll('.icon'); // Altere o seletor conforme sua estrutura
+
+const itens = ["design", "make", "package", "use", "recycle"];
+const texts = [
+    { id: 1, title: "Texto 1", text: "Lorem ipsum 1", centerText: "Center 1" },
+    { id: 2, title: "Texto 2", text: "Lorem ipsum 2" },
+    { id: 3, title: "Texto 3", text: "Lorem ipsum 3", centerText: "Center 2" },
+    { id: 4, title: "Texto 4", text: "Lorem ipsum 4" },
+    { id: 5, title: "Texto 5", text: "Lorem ipsum 5", centerText: "Center 3" },
+    { id: 6, title: "Texto 6", text: "Lorem ipsum 6" },
+    { id: 7, title: "Texto 7", text: "Lorem ipsum 7", centerText: "Center 4" },
+    { id: 8, title: "Texto 8", text: "Lorem ipsum 8" },
+    { id: 9, title: "Texto 9", text: "Lorem ipsum 9", centerText: "Center 5" },
+    { id: 10, title: "Texto 10", text: "Lorem ipsum 10" }
+];
+
+const itemToTextIds = {
+    design: [1, 2],
+    make: [3, 4],
+    package: [5, 6],
+    use: [9, 10],
+    recycle: [7, 8]
+};
+
+// Define um estado inicial
+let currentActive = null;
+
+// Função para atualizar textos
+function activateTexts() {
+  text1.classList.add('active');
+  text2.classList.add('active');
+  title1.classList.add('active');
+  title2.classList.add('active');
+  textCenter.classList.add('active');
+}
+
+// Função para desativar os textos (caso necessário, como na inicialização)
+function deactivateTexts() {
+  text1.classList.remove('active');
+  text2.classList.remove('active');
+  title1.classList.remove('active');
+  title2.classList.remove('active');
+  textCenter.classList.remove('active');
+}
+
+// Função para atualizar os textos com um pequeno atraso para ativar os efeitos
+function updateTexts(textIds) {
+  if (!textIds) return;
+
+  const text1Id = textIds[0] - 1;
+  const text2Id = textIds[1] - 1;
+
+  if (text1Id >= 0 && text1Id < texts.length) {
+      textCenter.textContent = texts[text1Id].centerText || "";
+      text1.textContent = texts[text1Id].text;
+      title1.textContent = texts[text1Id].title;
+  }
+  if (text2Id >= 0 && text2Id < texts.length) {
+      text2.textContent = texts[text2Id].text;
+      title2.textContent = texts[text2Id].title;
+  }
+
+  // Garante que a classe seja removida antes de reativar
+  deactivateTexts();
+
+  // Reativa os textos com efeito após pequeno atraso
+  setTimeout(() => {
+      activateTexts();
+  }, 300); // Pequeno atraso para garantir a transição
+}
+
+// Configuração inicial: exibe o texto padrão (ID 1 e 2)
+document.addEventListener("DOMContentLoaded", () => {
+    const defaultTextIds = itemToTextIds["design"]; // Ou outro item padrão
+    updateTexts(defaultTextIds);
+    currentActive = nossaCausa[0]; // Define o primeiro ícone como ativo
+    currentActive.classList.add('active');
+});
+
+// Adiciona eventos aos ícones
 nossaCausa.forEach((icon, index) => {
-  icon.addEventListener("mouseover", (event) => {
-    event.preventDefault();
-    
-    text1.classList.add('show');
-    text2.classList.add('show');
-    title1.classList.add('show');
-    title2.classList.add('show');
+  icon.addEventListener("mouseover", () => {
+      const itemName = itens[index];
+      const textIds = itemToTextIds[itemName];
 
-    const itemName = itens[index];
-    const textIds = itemToTextIds[itemName];
+      if (currentActive === icon) return; // Não faz nada se o ícone já estiver ativo
 
-    if (textIds) { // Testa se o Text id existe (se não for undefined ou null)
-      const text1Id = textIds[0] - 1;
-      const text2Id = textIds[1] - 1;
+      // Remove estilizações do ícone ativo anterior
+      if (currentActive) {
+          currentActive.classList.remove('active');
+          nossaCausa.forEach(el => el.classList.remove('inactive'));
+      }
 
-      setTimeout(() => {
+      // Atualiza o ícone ativo
+      currentActive = icon;
+      icon.classList.add('active');
+      updateTexts(textIds); // Atualiza os textos com transição
 
-        if (text1Id >= 0 && text1Id < texts.length) {
-          textCenter.textContent = texts[text1Id].centerText;
-          text1.textContent = texts[text1Id].text;
-          text1.classList.add('show');
-        }
-        if (text2Id >= 0 && text2Id < texts.length) {
-          text2.textContent = texts[text2Id].text;
-          title1.textContent = texts[text1Id].title;
-          title2.textContent = texts[text2Id].title;
-        }
-        text1.classList.remove('show');
-        text2.classList.remove('show');
-        title1.classList.remove('show');
-        title2.classList.remove('show');
-      }, 300)
-    }
+      // Aplica opacidade reduzida aos outros ícones
+      nossaCausa.forEach(el => {
+          if (el !== icon) el.classList.add('inactive');
+      });
   });
 });
