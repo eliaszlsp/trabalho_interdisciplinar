@@ -104,8 +104,6 @@ main {
 }
 
 #svg10 {
-  display: auto;
-  margin: auto;
   width: 60vw; /*Logo svg da cosmica */
   height: 60vh;
 }
@@ -184,7 +182,6 @@ main {
 }
 
 #Sobre_nos {
-  padding-top: 70px;
   width: 75rem;
   height: 100%;
   align-items: center;
@@ -231,7 +228,6 @@ main {
 }
 
 #Upcycle {
-  padding-top: 70px;
   width: 75rem;
   height: 100%;
   align-items: center;
@@ -378,7 +374,6 @@ main {
 nav {
   display: flex;
   justify-content: center;
-  gap: 70px;
 }
 .menu {
   position: relative;
@@ -442,7 +437,6 @@ nav {
 }
 
 #produtos-Section {
-  padding-top: 70px;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -516,9 +510,9 @@ nav {
 
 .secao_nossa_causa {
   height: max-content;
+  display: flex;
 }
 #Nossa_causa {
-  padding-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -550,7 +544,6 @@ nav {
 }
 .secao_nossa_causa {
   height: 100dvh;
-  display: flex;
 }
 
 .circulo_sustentavel {
@@ -593,22 +586,29 @@ nav {
   border-radius: 50%;
   font-size: 1.5rem;
 }
-.icon {
-  transition: all 0.4s ease-in-out;
-  cursor: pointer;
+
+.text1, .text2, .circle-text, .title1, .title2 {
+  opacity: 0;
+  transform: translateY(20px); /* Mova os textos para baixo */
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.icon:hover {
-  transform: scale(1.1);
+
+/* Textos visíveis */
+.text1.active, .text2.active, .circle-text.active, .title1.active, .title2.active {
+  opacity: 1;
+  transform: translateY(0); /* Volta à posição original */
 }
-.text1,
-.text2,
-.title1,
-.title2 {
-  filter: blur(0rem);
-  transition: all 0.3s ease-in-out;
+/* Ícone ativo */
+.icon.active {
+  transform: scale(1.2); /* Aumenta o tamanho */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 2; /* Garante que ele se destaca */
 }
-.show {
-  filter: blur(0.3125rem);
+
+/* Outros ícones */
+.icon.inactive {
+  opacity: 0.5; /* Reduz opacidade dos inativos */
+  transition: opacity 0.3s ease;
 }
 .circulo_sustentavel .label {
   margin-top: 0.625rem;
@@ -653,40 +653,6 @@ nav {
   font-size: 1.125rem;
   font-weight: 500;
   color: #333;
-}
-
-.text1,
-.text2,
-.circle-text,
-.title1,
-.title2 {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-}
-
-.text1.active,
-.text2.active,
-.circle-text.active,
-.title1.active,
-.title2.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.icon.active {
-  transform: scale(1.2);
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-  z-index: 2;
-}
-
-.icon.inactive {
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
 }
 
 @keyframes spin {
