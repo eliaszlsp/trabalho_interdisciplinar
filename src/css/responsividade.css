@@ -1,4 +1,307 @@
-@media (max-width: 768px) {
+@import url("../fonts/fonts.css");
+
+:root {
+  --color-background: #e3e6dd;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-cosmica-dark-green: #61806b;
+  --color-cosmica-light-green: #a0b491;
+  --color-cosmica-gray: #373937;
+  --color-cosmica-light: #e3e6dd;
+}
+@media (max-width: 1280px) {
+  #hero img {
+    max-width: 500px;
+    max-height: auto;
+    object-fit: cover;
+  }
+  .slogan {
+    font-size: 25px; /* Ajuste o tamanho da fonte do slogan */
+    margin-top: 0.625rem; /* Espaçamento superior */
+    color: #e3e6dd;
+    text-align: center;
+  }
+  .produto {
+    width: auto;
+    height: 400px;
+    margin-left: 10px;
+  }
+  .produtos-wrapper {
+    width: auto;
+  }
+  .texto_sustentavel_upcycle {
+    width: 352px;
+  }
+
+  .container_img_upcycle {
+    height: 100%;
+    display: block;
+    width: auto;
+  }
+  .secao_nossa_causa {
+    height: 100dvh;
+  }
+  #Nossa_causa {
+    width: 100%;
+    height: 100%;
+  }
+
+  .circulo_sustentavel {
+    position: relative;
+    min-width: 15.75rem;
+    min-height: 15.75rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* animation: spin 60s linear infinite; */
+  }
+  .circulo_sustentavel .icon {
+    padding: 10px;
+  }
+  .design {
+    top: 20%;
+    left: 93%;
+    transform: translate(-120%, -46%);
+  }
+  .make {
+    top: 71%;
+    right: 18px;
+    transform: translate(50%, -50%);
+  }
+  .package {
+    bottom: -0.625rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  .use {
+    top: 19%;
+    left: 30%;
+    transform: translate(-120%, -40%);
+  }
+  .recycle {
+    top: 72%;
+    left: 17%;
+    transform: translate(-120%, -40%);
+  }
+
+  .circle-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 884px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--color-cosmica-light);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100dvh;
+  }
+
+  .slogan {
+    font-size: 32px; /* Ajuste o tamanho da fonte do slogan */
+    margin-top: 10px; /* Espaçamento superior */
+    color: #e3e6dd;
+    text-align: center;
+  }
+  #logo-menu-responsivo {
+    height: 100%;
+    width: 100px;
+    fill: #333;
+    display: nome;
+    margin: 0px 10px;
+    margin-top: 8px;
+    z-index: 2;
+  }
+
+  .menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    cursor: pointer;
+    margin: 20px 20px;
+  }
+  .menu-hamburguer .linha {
+    width: 32px;
+    height: 3px;
+    background-color: var(--color-background);
+    margin: 4px 0;
+  }
+
+  .hamburger-nav {
+    top: 0px;
+    position: absolute;
+    display: nome;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-cosmica-gray);
+    width: 100%;
+    height: 100dvh;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .hamburger-nav.ativo {
+    display: flex;
+    opacity: 1;
+  }
+
+  #hero img {
+    width: 100%;
+  }
+  #hero {
+    background-attachment: fixed; /* Parallax effect */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #secao_sobre_nos {
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    height: 100dvh;
+    text-justify: newspape;
+    min-height: max-content;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 0px 20px;
+  }
+  #Sobre_nos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .texto_sustentavel_Sobre_nos {
+    width: 50%;
+  }
+  .container_img_Sobre_nos {
+    height: auto;
+    width: 50%;
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+
+  #secao_upcycle {
+    width: 100vw;
+  }
+  #Upcycle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+    height: 100%;
+    padding: 20px;
+  }
+
+  .container_img_upcycle {
+    height: auto;
+    width: 50%;
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+
+  .texto_sustentavel_upcycle {
+  }
+
+  .sustentavel {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .texto_Nossa_causa {
+    margin: 0px;
+    width: 100%;
+  }
+
+  .texto_Nossa_causa p {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  #produtos-Section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    height: fit-content;
+    width: 100vw;
+  }
+
+  .produtos-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    overflow: scroll;
+
+    transition: all 1.5s ease-in-out;
+  }
+
+  .produtos {
+    flex-direction: row;
+    width: 100vh;
+  }
+
+  .produto {
+    width: 300px;
+    flex: none;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 400px;
+  }
+  .produto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #Nossa_causa {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100dvw;
+    gap: 100px;
+  }
+
+  .texto_Nossa_causa {
+    width: 100%;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .texto_Nossa_causa p {
+    text-align: left;
+  }
+
+  #produtos-Section {
+    height: 100vh;
+    padding: 20px;
+  }
+
+  /* Footer */
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -21,18 +324,165 @@
     justify-content: center;
   }
 
-  .produtos {
-    flex-direction: column;
-  }
-
-  .produto,
-  .material {
-    width: 100%;
-  }
-
   .preenchimento input[type="nome"],
   .preenchimento input[type="e-mail"],
   .mensagem_usuario {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slogan {
+    font-size: 16px; /* Ajuste o tamanho da fonte do slogan */
+    margin-top: 10px; /* Espaçamento superior */
+    color: #e3e6dd;
+    text-align: center;
+  }
+  #titulo_Sobre_nos {
+    display: none;
+  }
+  #Sobre_nos {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #secao_sobre_nos {
+    height: min-content;
+    padding: 0px;
+  }
+
+  #titulo_Sobre_nos_mobile {
+    font-size: 32px;
+    display: block;
+  }
+
+  .texto_sustentavel_Sobre_nos {
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 3.125rem;
+    flex-direction: column;
+    width: 50%;
+    text-align: left;
+    padding: 0.625rem;
+  }
+
+  .container_img_Sobre_nos {
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+
+    display: flex;
+
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  .texto_sustentavel_Sobre_nos {
+    width: 100%;
+    height: 50%;
+  }
+
+  #secao_upcycle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #Upcycle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    .container_img_upcycle {
+      width: 100%;
+      height: 50%;
+      padding: 10px;
+      display: flex;
+    }
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  .design {
+    top: 18%;
+    left: 93%;
+    transform: translate(-120%, -46%);
+  }
+  .make {
+    top: 71%;
+    right: 21px;
+    transform: translate(50%, -50%);
+  }
+
+  .package {
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  .use {
+    top: 18%;
+    left: 29%;
+    transform: translate(-120%, -40%);
+  }
+  .recycle {
+    top: 71%;
+    left: 21%;
+    transform: translate(-120%, -40%);
+  }
+
+  .circulo_sustentavel .icon {
+    background-color: #61806b;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 16px;
+  }
+
+  .circle-text {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  #Nossa_causa {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100dvw;
+    gap: 100px;
+  }
+
+  .circulo_sustentavel {
+    position: relative;
+    width: calc(492px / 1.5);
+    height: calc(492px / 1.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: spin 60s linear infinite; */
+  }
+
+  .produto {
+    width: 250px;
+    margin-left: 8px;
+
+    flex: none;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 300px;
+  }
+
+  .produto-botao {
+    margin-right: 8px;
   }
 }
