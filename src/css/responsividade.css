@@ -138,7 +138,7 @@
   .hamburger-nav {
     top: 0px;
     position: absolute;
-    display: nome;
+    display: none;
     flex-direction: column;
     align-items: center;
     background-color: var(--color-cosmica-gray);
@@ -369,7 +369,7 @@
   }
 
   .container_img_Sobre_nos {
-    width: 100%;
+    width: 80%;
     height: 40%;
     padding: 10px;
 
@@ -388,7 +388,6 @@
 
   #secao_upcycle {
     display: flex;
-    flex-direction: column;
   }
 
   #Upcycle {
