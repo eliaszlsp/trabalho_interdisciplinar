@@ -5,6 +5,7 @@ const targetDiv = document.querySelector(".nav");
 const image = document.querySelector(".logo-type");
 const logoNav = document.querySelector(".logo");
 const linksNav = document.querySelectorAll(".navbar-menu li a");
+const navHamburger = document.querySelector(".hamburger-nav");
 const menuHamburger = document.querySelector("#menuHamburguer");
 const menuHamburgerLinha = document.querySelectorAll(".linha");
 const hero = document.querySelector("#hero");
@@ -15,11 +16,13 @@ window.addEventListener("scroll", () => {
   if (window.innerWidth < 884) {
     const finalDoElento = hero.getBoundingClientRect().bottom;
     if (finalDoElento < 22 && !menuHamburger.classList.contains("ativo")) {
-      console.log(finalDoElento);
+      targetDiv.style.backgroundColor = "#e3e6dd";
+
       menuHamburgerLinha.forEach((element) => {
         element.style.backgroundColor = "black";
       });
     } else {
+      targetDiv.style.backgroundColor = "transparent";
       menuHamburgerLinha.forEach((element) => {
         element.style.backgroundColor = "white";
       });
@@ -299,6 +302,10 @@ nossaCausa.forEach((icon, index) => {
 });
 
 menuHamburger.addEventListener("click", function () {
-  this.classList.toggle("ativo");
-  document.querySelector(".hamburger-nav").classList.toggle("ativo");
+  navHamburger.classList.toggle("ativo");
+});
+navHamburger.addEventListener("click", function () {
+  if (navHamburger.classList.contains("ativo")) {
+    navHamburger.classList.toggle("ativo");
+  }
 });

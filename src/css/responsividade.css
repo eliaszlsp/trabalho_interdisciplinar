@@ -105,6 +105,10 @@
     width: 100dvh;
   }
 
+  .nav > a {
+    display: none;
+  }
+
   .slogan {
     font-size: 32px; /* Ajuste o tamanho da fonte do slogan */
     margin-top: 10px; /* Espaçamento superior */
@@ -147,10 +151,14 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
+  .ativo {
+    overflow: hidden;
+  }
 
   .hamburger-nav.ativo {
     display: flex;
     opacity: 1;
+    overflow: hidden;
   }
 
   #hero img {
@@ -216,9 +224,6 @@
       display: block;
       height: auto;
     }
-  }
-
-  .texto_sustentavel_upcycle {
   }
 
   .sustentavel {
