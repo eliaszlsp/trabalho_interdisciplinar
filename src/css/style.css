@@ -466,7 +466,7 @@ nav {
 .produto img {
   width: 100%;
   height: 34.375rem;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 0.625rem;
   transition: all 0.5s ease-in-out;
 }
@@ -586,7 +586,21 @@ nav {
   border-radius: 50%;
   font-size: 1.5rem;
 }
-
+.circle-text{
+  font-size: 1.5rem;
+  font-weight: bold;
+  max-width: 20rem;
+  text-align: center;
+}
+.text1, .text2{
+  font-size: 1rem;
+  text-align: justify;
+}
+.title1, .title2{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+}
 .text1, .text2, .circle-text, .title1, .title2 {
   opacity: 0;
   transform: translateY(20px); /* Mova os textos para baixo */
@@ -599,7 +613,7 @@ nav {
   transform: translateY(0); /* Volta à posição original */
 }
 /* Ícone ativo */
-.icon.active {
+ .icon.active {
   transform: scale(1.2); /* Aumenta o tamanho */
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 2; /* Garante que ele se destaca */
@@ -645,14 +659,19 @@ nav {
 
 .texto_Nossa_causa {
   margin-top: 2.5rem;
-  gap: 10px;
+  gap: 30px;
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 40%;
   margin-left: 3.125rem;
   font-size: 1.125rem;
   font-weight: 500;
   color: #333;
+  align-items: center;
+}
+.texto_Nossa_causa div{
+  width: 50%;
+  min-height: 19.375rem;
 }
 
 @keyframes spin {
