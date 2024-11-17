@@ -39,17 +39,17 @@
     width: auto;
   }
   .secao_nossa_causa {
-    height: 100dvh;
+    height: fit-content;
   }
   #Nossa_causa {
     width: 100%;
-    height: 100%;
+    min-height: min-content;
   }
 
   .circulo_sustentavel {
     position: relative;
-    min-width: 15.75rem;
-    min-height: 15.75rem;
+    min-width: 20.75rem;
+    min-height: 20.75rem;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -92,6 +92,10 @@
 }
 
 @media (max-width: 884px) {
+  html {
+    scroll-padding-top: 70px; /* Ajuste de acordo com a altura da sua navbar */
+    scroll-behavior: smooth; /* Para rolagem suave */
+  }
   body {
     width: 100%;
     overflow-x: hidden;
@@ -103,6 +107,7 @@
     justify-content: space-between;
     flex-direction: row-reverse;
     width: 100dvh;
+    height: 70px;
   }
 
   .nav > a {
@@ -227,10 +232,16 @@
     margin: 0;
     padding: 10px;
   }
-
+  .secao_nossa_causa {
+    min-height: max-content;
+  }
   .texto_Nossa_causa {
-    margin: 0px;
     width: 100%;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
   }
 
   .texto_Nossa_causa p {
@@ -283,7 +294,6 @@
     flex-direction: column;
     padding: 10px;
     width: 100dvw;
-    gap: 100px;
   }
 
   .texto_Nossa_causa {
@@ -296,7 +306,21 @@
   .texto_Nossa_causa p {
     text-align: left;
   }
+  #Nossa_causa {
+    width: 100%;
+    min-height: max-content;
+  }
+  .circulo_sustentavel {
+    position: relative;
+    min-width: 30.75rem;
+    min-height: 30.75rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    /* animation: spin 60s linear infinite; */
+  }
   #produtos-Section {
     height: 100vh;
     padding: 20px;
@@ -352,7 +376,6 @@
   }
 
   #titulo_Sobre_nos_mobile {
-    font-size: 32px;
     display: block;
   }
 

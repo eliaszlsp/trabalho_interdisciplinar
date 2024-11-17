@@ -13,8 +13,8 @@ const hero = document.querySelector("#hero");
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
+  const finalDoElento = hero.getBoundingClientRect().bottom;
   if (window.innerWidth < 884) {
-    const finalDoElento = hero.getBoundingClientRect().bottom;
     if (finalDoElento < 22 && !menuHamburger.classList.contains("ativo")) {
       targetDiv.style.backgroundColor = "#e3e6dd";
 
@@ -28,7 +28,7 @@ window.addEventListener("scroll", () => {
       });
     }
   } else {
-    if (scrollTop >= 1035) {
+    if (scrollTop >= finalDoElento) {
       if (scrollTop > 0 && scrollTop > lastScrollTop) {
         // Usuário está rolando para baixo
         if (!targetDiv.contains(image)) {
@@ -143,7 +143,7 @@ const maisCards = [
     text: "A linha de bolsas da Cósmica Upcycle é um verdadeiro exemplo de sustentabilidade e inovação. Na imagem, vemos quatro bolsas dispostas em uma estrutura de metal, que simbolicamente remete a um lixo. No entanto, essa colocação não é um sinal de descaso, mas sim uma poderosa mensagem sobre a origem desses produtos. Cada uma dessas bolsas foi confeccionada a partir de tecidos velhos que, de outra forma, seriam descartados. A CósmiCa Upcycle transforma o que seria lixo em peças únicas e estilosas, promovendo a reutilização de materiais e a redução de resíduos. Essa abordagem não só contribui para a preservação do meio ambiente, mas também oferece aos consumidores produtos com uma história e um propósito. Escolher uma bolsa da CósmiCa Upcycle é optar por estilo consciente e sustentabilidade, mostrando que o luxo pode, sim, nascer do descarte.",
   },
   {
-    text: "Upeksha significa equanimidade. Mochila ideal para o dia-a-dia, possui diversos bolsos externos, bolso interno para notebook até 15,6\". Forro impermeável fácil de limpar. Alças e costas acolchoadas e com tecido respirável. Produzida de forma artesanal e afetuosa, com resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance.",
+    text: 'Upeksha significa equanimidade. Mochila ideal para o dia-a-dia, possui diversos bolsos externos, bolso interno para notebook até 15,6". Forro impermeável fácil de limpar. Alças e costas acolchoadas e com tecido respirável. Produzida de forma artesanal e afetuosa, com resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance.',
   },
   {
     text: "Nossa primeira bolsa vendida aqui na Cósmica, há 4 anos ela é um sucesso entre nossos clientes. Leve e discreta seu tamanho parece pequeno, mas ela é uma bolsa muito espaçosa. Produzida de forma artesanal e afetuosa, com resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance. Tem forro impermeável, alças acetinadas com 30mm, com mosquetões cromado. ",
@@ -200,16 +200,63 @@ const nossaCausa = document.querySelectorAll(".icon"); // Altere o seletor confo
 
 const itens = ["design", "make", "package", "use", "recycle"];
 const texts = [
-  { id: 1, title: "Criatividade e Sustentabilidade em Transformação", text: "O design da moda upcycle combina sustentabilidade, criatividade e inovação para transformar peças de roupas e materiais descartados em novos produtos únicos e estilizados. Essa abordagem se baseia na reinvenção, utilizando tecidos antigos, sobras de produção ou roupas com defeitos para criar algo novo e funcional, sem a necessidade de produzir novas matérias-primas.", centerText: "O Design da moda upcycle" },
-  { id: 2, title: "Estilo Único com Impacto Sustentável", text: "Além de sua estética inovadora, o design da moda upcycle promove um impacto positivo ao reduzir o desperdício têxtil e minimizar os recursos naturais utilizados na produção. Ele também valoriza a individualidade do consumidor, oferecendo produtos que contam histórias e celebram a personalização. Dessa forma, o design upcycle não só redefine o que é considerado moda, mas também incentiva um consumo mais consciente e responsável." },
-  { id: 3, title: "O Processo Criativo e Sustentável da Moda Upcycle", text: "Processo de desenvolvimento da moda UpcycleO processo de desenvolvimento da moda upcycle envolve várias etapas criativas e sustentáveis que transformam peças de roupas ou materiais descartados em novos itens de valor. O primeiro passo é a seleção de materiais, onde roupas antigas, sobras de tecidos ou itens com defeitos são coletados. Esses materiais são então avaliados para determinar seu potencial de reaproveitamento, considerando texturas, cores e condições.", centerText: "Um Passo Sustentável para Reduzir o Desperdício e Preservar Recursos" },
-  { id: 4, title: "Da Seleção à Criação Consciente", text: "Na segunda etapa, ocorre a desconstrução e preparação, onde os itens selecionados são desmontados e limpos. Em seguida, vem a fase de design e criação, na qual designers e artesãos utilizam técnicas como recorte, costura, tingimento e bordado para reinventar as peças, muitas vezes combinando elementos de diferentes itens para criar algo único. A última etapa é a finalização e acabamento, garantindo que os produtos sejam funcionais, confortáveis e esteticamente atrativos. Todo o processo é guiado por uma abordagem consciente, que valoriza a redução de desperdício e a inovação, criando peças que carregam tanto estilo quanto propósito." },
-  { id: 5, title: "Uma Resposta Sustentável aos Desafios da Indústria", text: "O método de chegada do upcycle refere-se ao modo como essa prática sustentável ganhou espaço e reconhecimento no design, na moda e em outras indústrias. Esse conceito surgiu em resposta a problemas crescentes como o desperdício excessivo, a exploração de recursos naturais e os impactos negativos da produção em massa, especialmente na indústria têxtil.", centerText: "A chegada da moda Upcycle" },
-  { id: 6, title: "A Evolução do Upcycle: De Pequenos Artesãos ao Mercado Global", text: "Adotado por pequenos designers e artesões, o método de upcycle gradualmente conquistou espaço em grandes marcas e no mercado global, refletindo uma mudança nos valores dos consumidores. Hoje, ele é visto como uma alternativa inovadora que combina responsabilidade ambiental com estética, tornando-se uma parte essencial das estratégias de design sustentável." },
-  { id: 7, title: "Transformação Criativa com Propósito Sustentável", text: "A reciclagem na moda upcycle é uma prática que vai além do simples reaproveitamento de materiais. Diferente da reciclagem tradicional, onde os materiais são processados para serem reutilizados em novas formas, o upcycling preserva a integridade do material original, transformando roupas e tecidos descartados em peças de maior valor sem a necessidade de desmantelar ou processar quimicamente os materiais.", centerText: "A Reciclagem da Moda Upcycle" },
-  { id: 8, title: "Sustentabilidade com Menos Energia e Impacto Ambiental", text: "Esse processo reduz significativamente o consumo de energia e a emissão de poluentes, já que evita etapas industriais complexas. Por exemplo, ao reaproveitar tecidos de roupas antigas, como jeans ou camisas, é possível criar novos designs sem a necessidade de produzir novos tecidos, o que economiza água e reduz o uso de pesticidas e produtos químicos." },
-  { id: 9, title: "Transformando Estilo em Impacto Ambiental Positivo", text: "O impacto do uso da moda upcycle é significativo tanto para o meio ambiente quanto para a sociedade. No aspecto ambiental, essa prática reduz o desperdício têxtil, desviando roupas e tecidos descartados de aterros sanitários. Além disso, diminui a necessidade de produção de novas matérias-primas, como algodão ou poliéster, que consomem grandes quantidades de água e energia e geram emissões de carbono.", centerText: "Uso da Moda Upcycle" },
-  { id: 10, title: "Um Passo Sustentável para Reduzir o Desperdício e Preservar Recursos", text: "O impacto do uso da moda upcycle é significativo tanto para o meio ambiente quanto para a sociedade. No aspecto ambiental, essa prática reduz o desperdício têxtil, desviando roupas e tecidos descartados de aterros sanitários. Além disso, diminui a necessidade de produção de novas matérias-primas, como algodão ou poliéster, que consomem grandes quantidades de água e energia e geram emissões de carbono." },
+  {
+    id: 1,
+    title: "Criatividade e Sustentabilidade em Transformação",
+    text: "O design da moda upcycle combina sustentabilidade, criatividade e inovação para transformar peças de roupas e materiais descartados em novos produtos únicos e estilizados. Essa abordagem se baseia na reinvenção, utilizando tecidos antigos, sobras de produção ou roupas com defeitos para criar algo novo e funcional, sem a necessidade de produzir novas matérias-primas.",
+    centerText: "O Design da moda upcycle",
+  },
+  {
+    id: 2,
+    title: "Estilo Único com Impacto Sustentável",
+    text: "Além de sua estética inovadora, o design da moda upcycle promove um impacto positivo ao reduzir o desperdício têxtil e minimizar os recursos naturais utilizados na produção. Ele também valoriza a individualidade do consumidor, oferecendo produtos que contam histórias e celebram a personalização. Dessa forma, o design upcycle não só redefine o que é considerado moda, mas também incentiva um consumo mais consciente e responsável.",
+  },
+  {
+    id: 3,
+    title: "O Processo Criativo e Sustentável da Moda Upcycle",
+    text: "Processo de desenvolvimento da moda UpcycleO processo de desenvolvimento da moda upcycle envolve várias etapas criativas e sustentáveis que transformam peças de roupas ou materiais descartados em novos itens de valor. O primeiro passo é a seleção de materiais, onde roupas antigas, sobras de tecidos ou itens com defeitos são coletados. Esses materiais são então avaliados para determinar seu potencial de reaproveitamento, considerando texturas, cores e condições.",
+    centerText:
+      "Um Passo Sustentável para Reduzir o Desperdício e Preservar Recursos",
+  },
+  {
+    id: 4,
+    title: "Da Seleção à Criação Consciente",
+    text: "Na segunda etapa, ocorre a desconstrução e preparação, onde os itens selecionados são desmontados e limpos. Em seguida, vem a fase de design e criação, na qual designers e artesãos utilizam técnicas como recorte, costura, tingimento e bordado para reinventar as peças, muitas vezes combinando elementos de diferentes itens para criar algo único. A última etapa é a finalização e acabamento, garantindo que os produtos sejam funcionais, confortáveis e esteticamente atrativos. Todo o processo é guiado por uma abordagem consciente, que valoriza a redução de desperdício e a inovação, criando peças que carregam tanto estilo quanto propósito.",
+  },
+  {
+    id: 5,
+    title: "Uma Resposta Sustentável aos Desafios da Indústria",
+    text: "O método de chegada do upcycle refere-se ao modo como essa prática sustentável ganhou espaço e reconhecimento no design, na moda e em outras indústrias. Esse conceito surgiu em resposta a problemas crescentes como o desperdício excessivo, a exploração de recursos naturais e os impactos negativos da produção em massa, especialmente na indústria têxtil.",
+    centerText: "A chegada da moda Upcycle",
+  },
+  {
+    id: 6,
+    title: "A Evolução do Upcycle: De Pequenos Artesãos ao Mercado Global",
+    text: "Adotado por pequenos designers e artesões, o método de upcycle gradualmente conquistou espaço em grandes marcas e no mercado global, refletindo uma mudança nos valores dos consumidores. Hoje, ele é visto como uma alternativa inovadora que combina responsabilidade ambiental com estética, tornando-se uma parte essencial das estratégias de design sustentável.",
+  },
+  {
+    id: 7,
+    title: "Transformação Criativa com Propósito Sustentável",
+    text: "A reciclagem na moda upcycle é uma prática que vai além do simples reaproveitamento de materiais. Diferente da reciclagem tradicional, onde os materiais são processados para serem reutilizados em novas formas, o upcycling preserva a integridade do material original, transformando roupas e tecidos descartados em peças de maior valor sem a necessidade de desmantelar ou processar quimicamente os materiais.",
+    centerText: "A Reciclagem da Moda Upcycle",
+  },
+  {
+    id: 8,
+    title: "Sustentabilidade com Menos Energia e Impacto Ambiental",
+    text: "Esse processo reduz significativamente o consumo de energia e a emissão de poluentes, já que evita etapas industriais complexas. Por exemplo, ao reaproveitar tecidos de roupas antigas, como jeans ou camisas, é possível criar novos designs sem a necessidade de produzir novos tecidos, o que economiza água e reduz o uso de pesticidas e produtos químicos.",
+  },
+  {
+    id: 9,
+    title: "Transformando Estilo em Impacto Ambiental Positivo",
+    text: "O impacto do uso da moda upcycle é significativo tanto para o meio ambiente quanto para a sociedade. No aspecto ambiental, essa prática reduz o desperdício têxtil, desviando roupas e tecidos descartados de aterros sanitários. Além disso, diminui a necessidade de produção de novas matérias-primas, como algodão ou poliéster, que consomem grandes quantidades de água e energia e geram emissões de carbono.",
+    centerText: "Uso da Moda Upcycle",
+  },
+  {
+    id: 10,
+    title:
+      "Um Passo Sustentável para Reduzir o Desperdício e Preservar Recursos",
+    text: "O impacto do uso da moda upcycle é significativo tanto para o meio ambiente quanto para a sociedade. No aspecto ambiental, essa prática reduz o desperdício têxtil, desviando roupas e tecidos descartados de aterros sanitários. Além disso, diminui a necessidade de produção de novas matérias-primas, como algodão ou poliéster, que consomem grandes quantidades de água e energia e geram emissões de carbono.",
+  },
 ];
 
 const itemToTextIds = {
