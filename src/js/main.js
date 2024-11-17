@@ -121,22 +121,22 @@ prevButton.addEventListener("click", () => {
 // Botão descrição dos produtos
 const maisCards = [
   {
-    text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
+    text: "Descrição breve do produto eco-friendly... A minibag é a bolsa ideal para quem gosta de sair com pouca coisa. Com tamanho ideal para carregar apenas o necessário, ela é leve, discreta e confortável.Produzida de forma artesanal e afetuosa, com resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance. Tem forro impermeável, alças acetinadas com 30mm e mosquetão de nylon ou cromado",
+  },
+  {
+    text: "Descrição breve do produto eco-friendly... Mochila ideal para quem tem um dia a dia um pouco mais cheio, ou gosta de estar sempre viajando. Ela possui diversos bolsos externos e um interno para notebook, com o limite de tela até 17,3. Um forro impermeável fácil de limpar. Alças e costas acolchoadas e com tecido respirável. Produzida de uma forma artesanal e afetuosa, com o resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance.",
+  },
+  {
+    text: "Descrição breve do produto eco-friendly... A minibag é a bolsa ideal para quem gosta de sair com pouca coisa. Com tamanho ideal para carregar apenas o necessário, ela é leve, discreta e confortável.Produzida de forma artesanal e afetuosa, com resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance. Tem forro impermeável, alças acetinadas com 30mm e mosquetão de nylon ou cromado",
   },
   {
     text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
   },
   {
-    text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
+    text: "Descrição breve do produto eco-friendly... A pochete Luna é a bolsa ideal para quem gosta de sair com pouca coisa. Com o tamanho ideal para carregar apenas o necessário, ela é leve, discreta e confortável. Produzida de forma artesanal e afetuosa. Com resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance. Tem forro impermeável, alças acetinadas com 30mm, ela é colorida e contém um engate de nylon Ao comprar essa peça, você está incetivando uma economia mais justa e sustentável para o planeta.",
   },
   {
-    text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
-  },
-  {
-    text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
-  },
-  {
-    text: "Descrição breve do produto eco-friendly... Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
+    text: "Descrição breve do produto eco-friendly... A minibag é a bolsa ideal para quem gosta de sair com pouca coisa. Com tamanho ideal para carregar apenas o necessário, ela é leve, discreta e confortável.Produzida de forma artesanal e afetuosa, com resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance. Tem forro impermeável, alças acetinadas com 30mm e mosquetão de nylon ou cromado",
   },
 ];
 const produtoButton = document.querySelectorAll(".saiba-mais");
