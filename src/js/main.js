@@ -301,11 +301,18 @@ nossaCausa.forEach((icon, index) => {
   });
 });
 
-menuHamburger.addEventListener("click", function () {
+menuHamburguer.addEventListener("click", function () {
   navHamburger.classList.toggle("ativo");
+  if (navHamburger.classList.contains("ativo")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "visible";
+  }
 });
 navHamburger.addEventListener("click", function () {
+  console.log("clicou");
   if (navHamburger.classList.contains("ativo")) {
+    document.body.style.overflow = "visible";
     navHamburger.classList.toggle("ativo");
   }
 });
