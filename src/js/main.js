@@ -188,7 +188,7 @@ produtoButton.forEach((button, index) => {
     if (isOpened) {
       infoContainer.classList.remove("expanded");
       textProduct[index].textContent = infosCards[index].descricao;
-      infoContainer.style.height = "155px";
+      infoContainer.style.height = "153px";
       button.style.transform = "rotate(0deg)";
     } else {
       infoContainer.classList.add("expanded");
