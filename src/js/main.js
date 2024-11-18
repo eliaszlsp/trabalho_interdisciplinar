@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
   const finalDoElento = hero.getBoundingClientRect().bottom;
-  if (window.innerWidth < 884) {
+  if (window.innerWidth < 1024) {
     if (finalDoElento < 22 && !menuHamburger.classList.contains("ativo")) {
       targetDiv.style.backgroundColor = "#e3e6dd";
 
@@ -130,13 +130,13 @@ cardsDisplay(infosCards);
 // botões para navegação entre os cards direita
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", () => {
-  if(window.innerWidth < 884){
+  if (window.innerWidth < 884) {
     cards.scrollBy({
       left: 270,
       behavior: "smooth",
     });
-  } 
-  if (window.innerWidth > 885){
+  }
+  if (window.innerWidth > 885) {
     cards.scrollBy({
       left: 1150,
       behavior: "smooth",
@@ -146,13 +146,13 @@ nextButton.addEventListener("click", () => {
 // botões para navegação entre os cards esquerda
 const prevButton = document.getElementById("prev");
 prevButton.addEventListener("click", () => {
-  if(window.innerWidth < 884){
+  if (window.innerWidth < 884) {
     cards.scrollBy({
       left: -270,
       behavior: "smooth",
     });
-  } 
-  if (window.innerWidth > 885){
+  }
+  if (window.innerWidth > 885) {
     cards.scrollBy({
       left: -1150,
       behavior: "smooth",
