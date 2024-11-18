@@ -7,7 +7,7 @@
         text-anchor: middle; /* Centraliza horizontalmente */
       }
       .main-text {
-        font-size: 28px;
+        font-size: 36px;
       }
       .small-text {
         font-size: 18px;

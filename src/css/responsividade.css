@@ -393,6 +393,10 @@
   main {
     gap: 20px;
   }
+
+  svg-container {
+    width: 100%;
+  }
   .slogan {
     font-size: 16px; /* Ajuste o tamanho da fonte do slogan */
     margin-top: 10px; /* Espaçamento superior */
