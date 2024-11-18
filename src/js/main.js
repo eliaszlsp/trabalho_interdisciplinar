@@ -14,16 +14,12 @@ window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
   const finalDoElento = hero.getBoundingClientRect().bottom;
-  if (window.innerWidth < 1024) {
+  if (window.innerWidth < 884) {
     if (finalDoElento < 22 && !menuHamburger.classList.contains("ativo")) {
       targetDiv.style.backgroundColor = "#e3e6dd";
 
       menuHamburgerLinha.forEach((element) => {
-        if (element.classList.contains("ativo")) {
-          element.style.backgroundColor = "white";
-        } else {
-          element.style.backgroundColor = "black";
-        }
+        element.style.backgroundColor = "black";
       });
     } else {
       targetDiv.style.backgroundColor = "transparent";
@@ -38,14 +34,11 @@ window.addEventListener("scroll", () => {
         if (!targetDiv.contains(image)) {
           // targetDiv.insertBefore(image, targetDiv.firstChild); // Move a imagem para o targetDiv
           logoNav.classList.add("scroll");
-
-          if (window.innerWidth > 1280) {
-            logoNav.style.display = "block";
-            linksNav.forEach((element) => {
-              element.style.color = "#333";
-              element.style.textShadow = "0 0 0";
-            });
-          }
+          logoNav.style.display = "block";
+          linksNav.forEach((element) => {
+            element.style.color = "#333";
+            element.style.textShadow = "0 0 0";
+          });
         }
       }
       header.classList.add("scroll-header");
@@ -130,13 +123,13 @@ cardsDisplay(infosCards);
 // botões para navegação entre os cards direita
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", () => {
-  if (window.innerWidth < 884) {
+  if(window.innerWidth < 884){
     cards.scrollBy({
       left: 270,
       behavior: "smooth",
     });
-  }
-  if (window.innerWidth > 885) {
+  } 
+  if (window.innerWidth > 885){
     cards.scrollBy({
       left: 1150,
       behavior: "smooth",
@@ -146,13 +139,13 @@ nextButton.addEventListener("click", () => {
 // botões para navegação entre os cards esquerda
 const prevButton = document.getElementById("prev");
 prevButton.addEventListener("click", () => {
-  if (window.innerWidth < 884) {
+  if(window.innerWidth < 884){
     cards.scrollBy({
       left: -270,
       behavior: "smooth",
     });
-  }
-  if (window.innerWidth > 885) {
+  } 
+  if (window.innerWidth > 885){
     cards.scrollBy({
       left: -1150,
       behavior: "smooth",
@@ -195,7 +188,7 @@ produtoButton.forEach((button, index) => {
     if (isOpened) {
       infoContainer.classList.remove("expanded");
       textProduct[index].textContent = infosCards[index].descricao;
-      infoContainer.style.height = "9.5rem";
+      infoContainer.style.height = "120px";
       button.style.transform = "rotate(0deg)";
     } else {
       infoContainer.classList.add("expanded");
@@ -372,29 +365,22 @@ nossaCausa.forEach((icon, index) => {
 });
 
 menuHamburger.addEventListener("click", function () {
-  menuHamburger.classList.toggle("ativo");
   navHamburger.classList.toggle("ativo");
-
-  // Controla o scroll do corpo
   if (navHamburger.classList.contains("ativo")) {
-    document.body.style.overflow = "hidden"; // Desativa o scroll
+    document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = "visible"; // Ativa o scroll
-  }
-});
-
-// Fecha o menu ao clicar em um link
-navHamburger.addEventListener("click", function (event) {
-  if (event.target.tagName === "A") {
-    navHamburger.classList.remove("ativo");
-    menuHamburger.classList.remove("ativo");
     document.body.style.overflow = "visible";
-
-    // Ativa o scroll
   }
 });
-const svgPath = "../src/imagens/logoAnimado.svg";
+navHamburger.addEventListener("click", function () {
+  console.log("clicou");
+  if (navHamburger.classList.contains("ativo")) {
+    document.body.style.overflow = "visible";
+    navHamburger.classList.toggle("ativo");
+  }
+});
 
+const svgPath = "../src/imagens/logoAnimado.svg";
 const svgContainer = document.getElementById("svg-container");
 fetch(svgPath)
   .then((response) => {
