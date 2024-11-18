@@ -123,18 +123,34 @@ cardsDisplay(infosCards);
 // botões para navegação entre os cards direita
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", () => {
-  cards.scrollBy({
-    left: 1150,
-    behavior: "smooth",
-  });
+  if(window.innerWidth < 884){
+    cards.scrollBy({
+      left: 270,
+      behavior: "smooth",
+    });
+  } 
+  if (window.innerWidth > 885){
+    cards.scrollBy({
+      left: 1150,
+      behavior: "smooth",
+    });
+  }
 });
 // botões para navegação entre os cards esquerda
 const prevButton = document.getElementById("prev");
 prevButton.addEventListener("click", () => {
-  cards.scrollBy({
-    left: -1150,
-    behavior: "smooth",
-  });
+  if(window.innerWidth < 884){
+    cards.scrollBy({
+      left: -270,
+      behavior: "smooth",
+    });
+  } 
+  if (window.innerWidth > 885){
+    cards.scrollBy({
+      left: -1150,
+      behavior: "smooth",
+    });
+  }
 });
 
 // Botão descrição dos produtos
