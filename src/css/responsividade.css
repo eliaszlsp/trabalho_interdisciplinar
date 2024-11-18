@@ -571,4 +571,7 @@
     min-height: calc(418px / 1.5);
     /* animation: spin 60s linear infinite; */
   }
+  .texto_sustentavel_upcycle {
+    width: 320px;
+  }
 }
