@@ -10,6 +10,15 @@
   --color-cosmica-light: #e3e6dd;
 }
 @media (max-width: 1280px) {
+  main {
+    gap: 80px;
+  }
+  #hero > img {
+    display: none;
+  }
+  .texto-produtos {
+    overflow-y: scroll;
+  }
   #hero img {
     max-width: 500px;
     max-height: auto;
@@ -91,7 +100,10 @@
   }
 }
 
-@media (max-width: 884px) {
+@media (max-width: 1024px) {
+  main {
+    gap: 60px;
+  }
   html {
     scroll-padding-top: 70px; /* Ajuste de acordo com a altura da sua navbar */
     scroll-behavior: smooth; /* Para rolagem suave */
@@ -101,6 +113,11 @@
     overflow-x: hidden;
     background-color: var(--color-cosmica-light);
   }
+  #svg10 {
+    width: 100%;
+    height: auto;
+  }
+
   nav {
     display: flex;
     align-items: center;
@@ -131,7 +148,6 @@
   }
 
   .menu-hamburguer {
-    display: flex;
     flex-direction: column;
     z-index: 100;
     cursor: pointer;
@@ -142,6 +158,20 @@
     height: 3px;
     background-color: var(--color-background);
     margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-hamburguer.ativo .linha:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: white;
+  }
+
+  .menu-hamburguer.ativo .linha:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-hamburguer.ativo .linha:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: white;
   }
 
   .hamburger-nav {
@@ -214,7 +244,6 @@
     width: 100%;
     flex-direction: row;
     height: 100%;
-    padding: 20px;
   }
 
   .container_img_upcycle {
@@ -289,6 +318,10 @@
     transition: all 0.5s ease-in-out;
   }
 
+  .texto-produtos {
+    overflow: scroll;
+  }
+
   #Nossa_causa {
     display: flex;
     flex-direction: column;
@@ -357,6 +390,9 @@
 }
 
 @media (max-width: 480px) {
+  main {
+    gap: 20px;
+  }
   .slogan {
     font-size: 16px; /* Ajuste o tamanho da fonte do slogan */
     margin-top: 10px; /* Espaçamento superior */
@@ -453,8 +489,8 @@
     transform: translate(-120%, -40%);
   }
   .recycle {
-    top: 71%;
-    left: 21%;
+    top: 68%;
+    left: 17%;
     transform: translate(-120%, -40%);
   }
 
@@ -501,7 +537,7 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    height: 300px;
+    height: 400px;
   }
 
   .produto-botao {

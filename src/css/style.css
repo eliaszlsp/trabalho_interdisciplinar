@@ -4,6 +4,42 @@ implementar scroll no produtos
  */
 
 @import url("../fonts/fonts.css");
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #61806b #e3e6dd;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #e3e6dd;
+  border: 10px solid #ffffff;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #f2fcff;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #b8c0c2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #61806b;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #a0b491;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #373937;
+}
 
 :root {
   --color-background: #e3e6dd;
@@ -637,6 +673,10 @@ nav {
   opacity: 1;
   transform: translateY(0); /* Volta à posição original */
 }
+.product-text {
+  margin-bottom: 3.75rem;
+}
+
 /* Ícone ativo */
 .icon.active {
   transform: scale(1.2); /* Aumenta o tamanho */

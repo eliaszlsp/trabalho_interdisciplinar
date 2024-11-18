@@ -19,7 +19,11 @@ window.addEventListener("scroll", () => {
       targetDiv.style.backgroundColor = "#e3e6dd";
 
       menuHamburgerLinha.forEach((element) => {
-        element.style.backgroundColor = "black";
+        if (element.classList.contains("ativo")) {
+          element.style.backgroundColor = "white";
+        } else {
+          element.style.backgroundColor = "black";
+        }
       });
     } else {
       targetDiv.style.backgroundColor = "transparent";
@@ -34,11 +38,14 @@ window.addEventListener("scroll", () => {
         if (!targetDiv.contains(image)) {
           // targetDiv.insertBefore(image, targetDiv.firstChild); // Move a imagem para o targetDiv
           logoNav.classList.add("scroll");
-          logoNav.style.display = "block";
-          linksNav.forEach((element) => {
-            element.style.color = "#333";
-            element.style.textShadow = "0 0 0";
-          });
+
+          if (window.innerWidth > 1280) {
+            logoNav.style.display = "block";
+            linksNav.forEach((element) => {
+              element.style.color = "#333";
+              element.style.textShadow = "0 0 0";
+            });
+          }
         }
       }
       header.classList.add("scroll-header");
@@ -349,22 +356,29 @@ nossaCausa.forEach((icon, index) => {
 });
 
 menuHamburger.addEventListener("click", function () {
+  menuHamburger.classList.toggle("ativo");
   navHamburger.classList.toggle("ativo");
+
+  // Controla o scroll do corpo
   if (navHamburger.classList.contains("ativo")) {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden"; // Desativa o scroll
   } else {
-    document.body.style.overflow = "visible";
-  }
-});
-navHamburger.addEventListener("click", function () {
-  console.log("clicou");
-  if (navHamburger.classList.contains("ativo")) {
-    document.body.style.overflow = "visible";
-    navHamburger.classList.toggle("ativo");
+    document.body.style.overflow = "visible"; // Ativa o scroll
   }
 });
 
+// Fecha o menu ao clicar em um link
+navHamburger.addEventListener("click", function (event) {
+  if (event.target.tagName === "A") {
+    navHamburger.classList.remove("ativo");
+    menuHamburger.classList.remove("ativo");
+    document.body.style.overflow = "visible";
+
+    // Ativa o scroll
+  }
+});
 const svgPath = "../src/imagens/logoAnimado.svg";
+
 const svgContainer = document.getElementById("svg-container");
 fetch(svgPath)
   .then((response) => {
