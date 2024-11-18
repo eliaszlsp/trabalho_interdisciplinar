@@ -73,8 +73,8 @@
     padding: 10px;
   }
   .design {
-    top: 20%;
-    left: 93%;
+    top: 18%;
+    left: 88%;
     transform: translate(-120%, -46%);
   }
   .make {
@@ -89,12 +89,12 @@
   }
   .use {
     top: 19%;
-    left: 30%;
+    left: 26%;
     transform: translate(-120%, -40%);
   }
   .recycle {
-    top: 72%;
-    left: 17%;
+    top: 69%;
+    left: 11%;
     transform: translate(-120%, -40%);
   }
 
@@ -190,7 +190,7 @@
     width: 100%;
     height: 100dvh;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
   }
 
   .hamburger-nav.ativo {
@@ -558,5 +558,11 @@
 
   .produto-botao {
     margin-right: 8px;
+  }
+}
+
+@media (max-width: 374px) {
+  .produto {
+    width: 14.0625rem;
   }
 }
