@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" width="100%" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" width="100%" height="100%">
   <defs>
     <style>
       @import url("../fonts/fonts.css"); /* Importa o CSS com a fonte */
       text {
         font-family: "RocaTwoRegular", sans-serif;
+        text-anchor: middle; /* Centraliza horizontalmente */
       }
       .main-text {
-        font-size: 36px;
+        font-size: 28px;
       }
       .small-text {
         font-size: 18px;
@@ -14,9 +15,9 @@
     </style>
   </defs>
   <!-- Texto com animação -->
-  <text x="50" y="50" fill="none" stroke="black" stroke-width="2">
-    <tspan class="main-text">Sustentável, Artesanal, Única.</tspan>
-    <tspan class="small-text"  x="425" dy="30">@cosmicacria</tspan> <!-- Ajustado para a direita -->
+  <text x="50%" y="50" fill="none" stroke="black" stroke-width="2">
+    <tspan class="main-text" x="50%">Sustentável, Artesanal, Única.</tspan>
+    <tspan class="small-text" x="50%" dy="30"></tspan> <!-- Centralizado horizontalmente -->
     <animate 
       attributeName="stroke-dasharray" 
       from="0,800" 

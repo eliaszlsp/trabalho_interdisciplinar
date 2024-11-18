@@ -50,6 +50,22 @@ implementar scroll no produtos
   --color-cosmica-gray: #373937;
   --color-cosmica-light: #e3e6dd;
 }
+
+p {
+  max-width: 600px;
+  margin: 0 auto 1em auto;
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
 html {
   scroll-padding-top: 70px; /* Ajuste de acordo com a altura da sua navbar */
   scroll-behavior: smooth; /* Para rolagem suave */
@@ -316,6 +332,10 @@ main {
 }
 
 .fraseAutoridade {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
   width: 100dvw;
 }
 
@@ -483,7 +503,7 @@ nav {
 }
 
 #produtos-Section {
-  padding: 70px 0px;
+  padding-bottom: 4.375rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
