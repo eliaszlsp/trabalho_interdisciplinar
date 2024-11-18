@@ -72,7 +72,7 @@ const infosCards = [
   {
     imagem: "src/imagens/cards/127 - CHEILAWIGGERS - 849A0239.jpg",
     nome: "Produto 2",
-    title: "Mochila",
+    title: "Mochila Upeksha",
     descricao: "Upeksha significa equanimidade. Mochila ideal para...",
   },
   {
@@ -84,8 +84,8 @@ const infosCards = [
   {
     imagem: "src/imagens/cards/Mochila.JPEG",
     nome: "Produto 4",
-    title: "Produto Sustentável 4",
-    descricao: "Descrição breve do produto eco-friendly...",
+    title: "Mochila Mudita",
+    descricao: "Mudita significa Alegria. Mochila ideal para quem tem...",
   },
   {
     imagem: "src/imagens/cards/IMG_5863.jpg",
@@ -149,7 +149,7 @@ const maisCards = [
     text: "Nossa primeira bolsa vendida aqui na Cósmica, há 4 anos ela é um sucesso entre nossos clientes. Leve e discreta seu tamanho parece pequeno, mas ela é uma bolsa muito espaçosa. Produzida de forma artesanal e afetuosa, com resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance. Tem forro impermeável, alças acetinadas com 30mm, com mosquetões cromado. ",
   },
   {
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam perspiciatis expedita tempore odit illo voluptatum, blanditiis eum? Quisquam provident obcaecati iure aliquid. Consequatur debitis dolorum quae sapiente corporis numquam!",
+    text: "Mudita significa Alegria. Mochila ideal para quem tem um dia-a-dia um pouco mais cheio ou gosta de está sempre viajando. Possui diversos bolsos externos, bolso interno para notebook até 17,3'\". Forro impermeável fácil de limpar. Alças e costas acolchoadas e com tecido respirável. Produzida de forma artesanal e afetuosa, com resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance. ",
   },
   {
     text: "A pochete Luna é a bolsa ideal para quem gosta de sair com pouca coisa. Com o tamanho ideal para carregar apenas o necessário, ela é leve, discreta e confortável. Produzida de forma artesanal e afetuosa. Com resíduo têxtil. Roupas descartadas e retalhos que receberam uma nova chance. Tem forro impermeável, alças acetinadas com 30mm, ela é colorida e contém um engate de nylon Ao comprar essa peça, você está incetivando uma economia mais justa e sustentável para o planeta.",
