@@ -348,7 +348,7 @@ nossaCausa.forEach((icon, index) => {
   });
 });
 
-menuHamburguer.addEventListener("click", function () {
+menuHamburger.addEventListener("click", function () {
   navHamburger.classList.toggle("ativo");
   if (navHamburger.classList.contains("ativo")) {
     document.body.style.overflow = "hidden";
@@ -363,3 +363,17 @@ navHamburger.addEventListener("click", function () {
     navHamburger.classList.toggle("ativo");
   }
 });
+
+const svgPath = "../src/imagens/logoAnimado.svg";
+const svgContainer = document.getElementById("svg-container");
+fetch(svgPath)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`Erro ao carregar o SVG: ${response.status}`);
+    }
+    return response.text();
+  })
+  .then((svgContent) => {
+    svgContainer.innerHTML = svgContent;
+  })
+  .catch((err) => console.error(err));

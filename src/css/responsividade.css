@@ -485,9 +485,8 @@
 
   .circulo_sustentavel {
     position: relative;
-    width: calc(492px / 1.5);
-    height: calc(492px / 1.5);
-
+    min-width: calc(492px / 1.5);
+    min-height: calc(492px / 1.5);
     display: flex;
     justify-content: center;
     align-items: center;

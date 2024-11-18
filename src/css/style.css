@@ -79,7 +79,7 @@ body {
   box-sizing: border-box;
   background-color: #e3e6dd;
   overflow-x: hidden;
-  width: 100%;
+  width: 100dvhw;
   font-family: "Cronos Pro Regular", sans-serif;
 }
 

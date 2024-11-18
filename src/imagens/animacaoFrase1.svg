@@ -16,7 +16,7 @@
       from="0,800" 
       to="800,0" 
       dur="4s" 
-      repeatCount="1" 
+      repeatCount="indefinite" 
       fill="freeze" />
   </text>
 </svg>
