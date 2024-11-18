@@ -372,22 +372,29 @@ nossaCausa.forEach((icon, index) => {
 });
 
 menuHamburger.addEventListener("click", function () {
+  menuHamburger.classList.toggle("ativo");
   navHamburger.classList.toggle("ativo");
+
+  // Controla o scroll do corpo
   if (navHamburger.classList.contains("ativo")) {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden"; // Desativa o scroll
   } else {
-    document.body.style.overflow = "visible";
-  }
-});
-navHamburger.addEventListener("click", function () {
-  console.log("clicou");
-  if (navHamburger.classList.contains("ativo")) {
-    document.body.style.overflow = "visible";
-    navHamburger.classList.toggle("ativo");
+    document.body.style.overflow = "visible"; // Ativa o scroll
   }
 });
 
+// Fecha o menu ao clicar em um link
+navHamburger.addEventListener("click", function (event) {
+  if (event.target.tagName === "A") {
+    navHamburger.classList.remove("ativo");
+    menuHamburger.classList.remove("ativo");
+    document.body.style.overflow = "visible";
+
+    // Ativa o scroll
+  }
+});
 const svgPath = "../src/imagens/logoAnimado.svg";
+
 const svgContainer = document.getElementById("svg-container");
 fetch(svgPath)
   .then((response) => {

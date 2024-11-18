@@ -561,18 +561,14 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 374px) {
   .produto {
     width: 14.0625rem;
   }
 
   .circulo_sustentavel {
-    position: relative;
     min-width: calc(418px / 1.5);
     min-height: calc(418px / 1.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     /* animation: spin 60s linear infinite; */
   }
 }
