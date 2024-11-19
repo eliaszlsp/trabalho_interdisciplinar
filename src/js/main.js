@@ -9,6 +9,7 @@ const navHamburger = document.querySelector(".hamburger-nav");
 const menuHamburger = document.querySelector("#menuHamburguer");
 const menuHamburgerLinha = document.querySelectorAll(".linha");
 const hero = document.querySelector("#hero");
+const logoNavResponsivo = document.querySelector("#logo-menu-responsivo");
 // Escuta o evento de scroll
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -17,18 +18,15 @@ window.addEventListener("scroll", () => {
   if (window.innerWidth < 1024) {
     if (finalDoElento < 22 && !menuHamburger.classList.contains("ativo")) {
       targetDiv.style.backgroundColor = "#e3e6dd";
-
+      logoNavResponsivo.style.display = "block";
       menuHamburgerLinha.forEach((element) => {
-        if (element.classList.contains("ativo")) {
-          element.style.backgroundColor = "white";
-        } else {
-          element.style.backgroundColor = "black";
-        }
+        element.style.backgroundColor = "black";
       });
     } else {
       targetDiv.style.backgroundColor = "transparent";
       menuHamburgerLinha.forEach((element) => {
         element.style.backgroundColor = "white";
+        logoNavResponsivo.style.display = "none";
       });
     }
   } else {
@@ -75,38 +73,45 @@ const infosCards = [
     nome: "Produto 1",
     title: "Bolsas Cosmica",
     descricao: "A linha de bolsas da Cósmica Upcycle é um verdadeiro...",
+    link: "",
   },
   {
     imagem: "src/imagens/cards/127 - CHEILAWIGGERS - 849A0239.jpg",
     nome: "Produto 2",
     title: "Mochila Upeksha",
     descricao: "Upeksha significa equanimidade. Mochila ideal para...",
+    link: "",
   },
   {
     imagem: "src/imagens/cards/IMG_1286 (1).jpg",
     nome: "Produto 3",
     title: "Basic bag",
     descricao: "A Basic bag é a bolsa ideal para quem gosta de sair...",
+    link: "",
   },
   {
     imagem: "src/imagens/cards/Mochila.JPEG",
     nome: "Produto 4",
     title: "Mochila Mudita",
     descricao: "Mudita significa Alegria. Mochila ideal para quem tem...",
+    link: "",
   },
   {
     imagem: "src/imagens/cards/IMG_5863.jpg",
     nome: "Produto 5",
     title: "Pochetes",
     descricao: "A pochete Luna é a bolsa ideal para quem gosta de sair...",
+    link: "",
   },
   {
     imagem: "src/imagens/cards/Upcycle afetivo.png",
     nome: "Produto 6",
     title: "Upcycle Afetivo",
     descricao: "A Cósmica Upcycle transforma peças antigas em novos...",
+    link: "",
   },
 ];
+
 // função para mostrar os cards na tela
 const produtos = document.querySelector("#produtos");
 function cardsDisplay(newProductDisplay) {
@@ -117,7 +122,7 @@ function cardsDisplay(newProductDisplay) {
         <img src="${card.imagem}" alt="${card.nome}"/>
         <div class="produto-info">
             <div class="texto-produtos">
-                <h3 class='product-title'>${card.title}</h3>
+               <h3 class='product-title'><a href="${card.link}" class="product-link">${card.title}</a>
                 <p class='product-text'>${card.descricao}</p>
             </div>             
             <button class="saiba-mais">+</button>

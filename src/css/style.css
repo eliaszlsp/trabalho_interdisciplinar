@@ -743,7 +743,14 @@ nav {
   left: 10%;
   transform: translate(-120%, -40%);
 }
+.product-title {
+  margin-block: auto;
+  a {
+    color: var(--color-white);
 
+    font-weight: 900;
+  }
+}
 .texto_Nossa_causa {
   margin-top: 2.5rem;
   gap: 30px;
@@ -856,4 +863,42 @@ nav {
   margin-top: 3.125rem;
   position: absolute;
   left: -80%;
+}
+
+.whatsapp-float {
+  flex-direction: column;
+  text-decoration: none;
+  position: fixed;
+
+  bottom: 6.3125rem;
+  right: 2.5rem;
+
+  /* background-size: cover; */
+  color: #fff;
+  border-radius: 3.125rem;
+  /* text-align: center; */
+  font-size: 1.875rem;
+  /* box-shadow: 3px 3px 3px #f3ecec; */
+  z-index: 100;
+  /* display: flex
+; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.whatsapp-float i {
+  font-size: 2em; /* Tamanho do ícone */
+
+  background-color: #25d366;
+  width: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.25rem;
+  border-radius: 50%;
+}
+
+.whatsapp-text {
+  color: var(--color-cosmica-gray);
+  margin-top: 0.625rem; /* Espaço entre o ícone e o texto */
+  font-size: 1.5625rem; /* Tamanho da fonte do texto */
 }

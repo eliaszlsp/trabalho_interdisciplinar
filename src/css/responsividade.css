@@ -128,12 +128,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse;
+
     width: 100dvh;
     height: 70px;
   }
 
-  .nav > a {
+  .nav > a:first-of-type {
     display: none;
   }
 
@@ -144,10 +144,9 @@
     text-align: center;
   }
   #logo-menu-responsivo {
-    height: 100%;
-    width: 100px;
-    fill: #333;
-    display: nome;
+    height: auto;
+    width: 70px;
+
     margin: 0px 10px;
     margin-top: 8px;
     z-index: 2;
@@ -393,6 +392,17 @@
   .mensagem_usuario {
     width: 100%;
   }
+
+  .whatsapp-float {
+    flex-direction: column;
+    text-decoration: none;
+    position: fixed;
+    bottom: 6.3125rem;
+    color: #fff;
+    border-radius: 3.125rem;
+    font-size: 1.875rem;
+    z-index: 100;
+  }
 }
 
 @media (max-width: 480px) {
@@ -573,5 +583,10 @@
   }
   .texto_sustentavel_upcycle {
     width: 320px;
+  }
+  .whatsapp-float i {
+    font-size: 1.2em;
+    height: 2.1rem;
+    width: 2.1rem;
   }
 }
