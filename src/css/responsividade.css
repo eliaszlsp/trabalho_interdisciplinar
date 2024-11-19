@@ -569,6 +569,9 @@
   .produto-botao {
     margin-right: 8px;
   }
+  .whatsapp-float {
+    left: 30px;
+  }
 }
 
 @media (max-width: 374px) {
