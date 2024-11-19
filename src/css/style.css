@@ -870,7 +870,7 @@ nav {
   text-decoration: none;
   position: fixed;
 
-  bottom: 6.3125rem;
+  bottom: 5.3125rem;
   right: 2.5rem;
 
   /* background-size: cover; */
@@ -880,10 +880,7 @@ nav {
   font-size: 1.875rem;
   /* box-shadow: 3px 3px 3px #f3ecec; */
   z-index: 100;
-  /* display: flex
-; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  width: 3.25rem;
 }
 .whatsapp-float i {
   font-size: 2em; /* Tamanho do ícone */
