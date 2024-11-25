@@ -10,15 +10,21 @@ const menuHamburger = document.querySelector("#menuHamburguer");
 const menuHamburgerLinha = document.querySelectorAll(".linha");
 const hero = document.querySelector("#hero");
 const logoNavResponsivo = document.querySelector("#logo-menu-responsivo");
+const sectionUpcycle = document.querySelector("#secao_upcycle");
+import { upCycle } from "./componentes/upcycle.js";
+
+sectionUpcycle.innerHTML = upCycle();
+
 // Escuta o evento de scroll
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
   const finalDoElento = hero.getBoundingClientRect().bottom;
+
   if (window.innerWidth < 1024) {
     if (finalDoElento < 22 && !menuHamburger.classList.contains("ativo")) {
       targetDiv.style.backgroundColor = "#e3e6dd";
       logoNavResponsivo.style.display = "block";
+
       menuHamburgerLinha.forEach((element) => {
         element.style.backgroundColor = "black";
       });
