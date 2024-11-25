@@ -1,6 +1,5 @@
 function upCycle() {
-  return `
-    <section id="secao_upcycle">
+  return `   
       <div id="Upcycle">
         <div class="container_img_upcycle">
           <img src="src/imagens/alixiaQuemFaz.jfif" alt="Imagem_upcycle" />
@@ -25,8 +24,7 @@ function upCycle() {
           </div>
         </div>
       </div>
-    </section>
-`;
+    `;
 }
 
 export { upCycle };

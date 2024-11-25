@@ -1,6 +1,5 @@
 function sobreNos() {
-  return `
-  <section id="secao_sobre_nos">
+  return `  
     <div id="Sobre_nos">
       <div class="texto_sustentavel_Sobre_nos">
         <h1 id="titulo_Sobre_nos">Nossa história</h1>
@@ -43,7 +42,7 @@ function sobreNos() {
       </div>
       <h1 id="titulo_Sobre_nos_mobile">Nossa história</h1>
     </div>
-  </section>`;
+  `;
 }
 
 export { sobreNos };

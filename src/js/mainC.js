@@ -1,3 +1,8 @@
+import { elementFooter } from "./componentes/footer.js";
+import { elementHero, svgHero } from "./componentes/hero.js";
+import { elementProdutos } from "./componentes/produtos.js";
+import { cardsDisplay, scroll, cardsInfo } from "./componentes/cards.js";
+import { headerIteracao, elementHeader } from "./componentes/header.js";
 import { nossaCausa, nossaCausaIteracao } from "./componentes/nossaCausa.js";
 import { sobreNos } from "./componentes/sobreNos.js";
 import { upCycle } from "./componentes/upcycle.js";
@@ -5,42 +10,76 @@ import { upCycle } from "./componentes/upcycle.js";
 // Função para criar o header
 const criarHeader = () => {
   const header = document.createElement("header");
+  header.innerHTML = elementHeader();
   document.body.appendChild(header);
+  headerIteracao();
 };
 
-// Função para criar a section principal
+// Função para criar a seção hero
 const criarSectionHero = () => {
   const section = document.createElement("section");
   section.setAttribute("id", "hero");
+  section.innerHTML = elementHero();
   document.body.appendChild(section);
+  svgHero();
 };
 
-// Função para criar o main com o conteúdo
+// Função para criar o main
 const criarMain = () => {
   const main = document.createElement("main");
-
-  // Adiciona o conteúdo de upCycle, sobreNos e nossaCausa
-  main.innerHTML = upCycle();
-  main.innerHTML += sobreNos();
-  main.innerHTML += nossaCausa();
-
-  // Adiciona o main ao body
   document.body.appendChild(main);
 
-  // Chama nossaCausaIteracao após o conteúdo ser inserido
+  // Seção Upcycle
+  const sectionUpcycle = document.createElement("section");
+  sectionUpcycle.setAttribute("id", "secao_upcycle");
+  sectionUpcycle.innerHTML = upCycle();
+  main.appendChild(sectionUpcycle);
+
+  // Seção Sobre Nós
+  const sectionSobreNos = document.createElement("section");
+  sectionSobreNos.setAttribute("id", "secao_sobre_nos");
+  sectionSobreNos.innerHTML = sobreNos();
+  main.appendChild(sectionSobreNos);
+
+  // Seção Nossa Causa
+  const sectionNossaCausa = document.createElement("section");
+  sectionNossaCausa.setAttribute("id", "secao_nossa_causa");
+  sectionNossaCausa.innerHTML = nossaCausa();
+  main.appendChild(sectionNossaCausa);
   nossaCausaIteracao();
+
+  // Seção Produtos
+  const sectionProdutos = document.createElement("section");
+  sectionProdutos.setAttribute("id", "produtos-Section");
+  sectionProdutos.innerHTML = elementProdutos();
+  main.appendChild(sectionProdutos);
+
+  // Configuração de cards
+  cardsDisplay();
+  scroll();
+  cardsInfo();
 };
 
 // Função para criar o footer
 const criarFooter = () => {
   const footer = document.createElement("footer");
   footer.setAttribute("class", "footer");
+  footer.innerHTML = elementFooter();
   document.body.appendChild(footer);
 };
 
-// Função para criar o anchor (link)
+// Função para criar o botão flutuante do WhatsApp
 const criarAnchor = () => {
   const anchor = document.createElement("a");
+  anchor.href = "https://wa.me/5547997873644";
+  anchor.target = "_blank";
+  anchor.alt = "whatsapp_link";
+  anchor.className = "whatsapp-float";
+
+  const icon = document.createElement("i");
+  icon.className = "fa-brands fa-whatsapp fa-flip-horizontal fa-2xl";
+  anchor.appendChild(icon);
+
   document.body.appendChild(anchor);
 };
 
@@ -53,5 +92,5 @@ const montarLayout = () => {
   criarAnchor();
 };
 
-// Chama a função para montar o layout completo
+// Executa a montagem do layout
 montarLayout();

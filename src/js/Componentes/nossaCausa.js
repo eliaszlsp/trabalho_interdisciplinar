@@ -68,7 +68,6 @@ const itemToTextIds = {
 
 function nossaCausa() {
   return `
-    <section class="secao_nossa_causa">
         <div id="Nossa_causa">
           <div><h1>Nossa Causa</h1></div>
           <div class="circulo_sustentavel">
@@ -132,9 +131,7 @@ function nossaCausa() {
             </div>
           </div>
         </div>
-      </section>
-      
-    `;
+      `;
 }
 let currentActive = null;
 
