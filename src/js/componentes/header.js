@@ -40,7 +40,6 @@ function headerIteracao() {
   const logoNavResponsivo = document.querySelector("#logo-menu-responsivo");
   // Escuta o evento de scroll
   window.addEventListener("scroll", () => {
-    console.log(hero);
 
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const finalDoElento = hero.getBoundingClientRect().bottom;
