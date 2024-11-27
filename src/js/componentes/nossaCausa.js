@@ -136,7 +136,6 @@ function nossaCausa() {
 let currentActive = null;
 
 const nossaCausaIteracao = () => {
-  console.log("oi");
   const textNossaCausa = document.querySelector(".texto_Nossa_causa");
   const textCenter = document.querySelector(".circle-text");
 
@@ -170,7 +169,6 @@ const nossaCausaIteracao = () => {
     const text2Id = textIds[1] - 1;
 
     if (text1Id >= 0 && text1Id < texts.length) {
-      console.log("Texto 1:", texts[text1Id]);
       textCenter.textContent = texts[text1Id].centerText || "";
       text1.textContent = texts[text1Id].text;
       title1.textContent = texts[text1Id].title;
