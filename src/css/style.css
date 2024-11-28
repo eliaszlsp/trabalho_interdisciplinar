@@ -81,10 +81,12 @@ h1 {
   font-size: 2.9375rem;
   font-weight: 500;
   color: #333;
+  font-display: swap;
 }
 
 svg text {
   font-family: "RocaTwoRegular", sans-serif;
+  font-display: swap;
 }
 html {
   scroll-behavior: smooth;
@@ -132,6 +134,7 @@ body {
   overflow-x: hidden;
   width: 100dvhw;
   font-family: "Cronos Pro Regular", sans-serif;
+  font-display: swap;
 }
 
 main {
@@ -148,7 +151,7 @@ main {
 }
 /* Banner Hero */
 #hero {
-  background-image: url("../imagens/backgroundHero.png"); /* Insira a imagem de fundo */
+  background-image: url("../imagens/backgroundHero.webp"); /* Insira a imagem de fundo */
   background-attachment: fixed; /* Parallax effect */
   background-size: cover;
   background-position: center;

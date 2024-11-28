@@ -78,8 +78,7 @@ function nossaCausa() {
   return `
         <div id="Nossa_causa">
           <div><h1>Nossa Causa</h1></div>
-          <div class="circulo_sustentavel">
-            <!-- <img src="src/imagens/plan_circle__dnpdu0scqp4y_large.png" alt="" /> -->
+          <div class="circulo_sustentavel">>
 
             <div class="border-circle">
               <img

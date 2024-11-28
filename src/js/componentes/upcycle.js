@@ -2,7 +2,7 @@ function upCycle() {
   return `   
       <div id="Upcycle">
         <div class="container_img_upcycle">
-          <img src="src/imagens/alixiaQuemFaz.jfif" alt="Imagem_upcycle" />
+          <img src="src/imagens/alixiaQuemFaz.webp" alt="Imagem_upcycle" />
         </div>
         <div class="texto_sustentavel_upcycle">
           <h1 id="titulo_upcycle">Quem sou eu?</h1>
