@@ -19,8 +19,8 @@ const criarSectionHero = () => {
   section.setAttribute("id", "hero");
   section.innerHTML = elementHero();
   document.body.appendChild(section);
-  svgHero();
-  headerIteracao();
+  // svgHero();
+  // headerIteracao();
 };
 
 const criarMain = () => {
