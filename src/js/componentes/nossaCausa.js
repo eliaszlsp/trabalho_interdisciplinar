@@ -143,9 +143,8 @@ function nossaCausa() {
 let currentActive = null;
 
 const nossaCausaIteracao = (section) => {
-  const textNossaCausa = section.querySelector(".texto_Nossa_causa");
-  const textCenter = section.querySelector(".circle-text");
 
+  const textCenter = section.querySelector(".circle-text");
   const title1 = section.querySelector(".title1");
   const text1 = section.querySelector(".text1");
   const title2 = section.querySelector(".title2");
@@ -159,7 +158,7 @@ const nossaCausaIteracao = (section) => {
     textCenter.classList.add("active");
   }
 
-  // Função para desativar os textos (caso necessário, como na inicialização)
+  // Função para desativar os textos 
   function deactivateTexts() {
     text1.classList.remove("active");
     text2.classList.remove("active");
