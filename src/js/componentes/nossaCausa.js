@@ -78,7 +78,7 @@ function nossaCausa() {
   return `
         <div id="Nossa_causa">
           <div><h1>Nossa Causa</h1></div>
-          <div class="circulo_sustentavel">>
+          <div class="circulo_sustentavel">
 
             <div class="border-circle">
               <img
@@ -145,7 +145,6 @@ let currentActive = null;
 const nossaCausaIteracao = (section) => {
   const textNossaCausa = section.querySelector(".texto_Nossa_causa");
   const textCenter = section.querySelector(".circle-text");
-  console.log(textCenter);
 
   const title1 = section.querySelector(".title1");
   const text1 = section.querySelector(".text1");
@@ -209,7 +208,6 @@ const nossaCausaIteracao = (section) => {
       const itemName = itens[index];
 
       const textIds = itemToTextIds[itemName];
-      /* console.log(textIds, "textIds"); */
 
       if (currentActive === icon) return; // Não faz nada se o ícone já estiver ativo
 
