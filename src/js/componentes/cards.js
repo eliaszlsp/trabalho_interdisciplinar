@@ -1,6 +1,6 @@
 const infosCards = [
     {
-      imagem: "src/imagens/cards/Bolsas-juntas.JPEG",
+      imagem: "src/imagens/cards/Bolsas-juntas_1.jpg",
       nome: "Produto 1",
       title: "Bolsas Cosmica",
       descricao: "A linha de bolsas da Cósmica Upcycle é um verdadeiro...",
@@ -18,7 +18,7 @@ const infosCards = [
       descricao: "A Basic bag é a bolsa ideal para quem gosta de sair...",
     },
     {
-      imagem: "src/imagens/cards/Mochila.JPEG",
+      imagem: "src/imagens/cards/Mochila_1.jpg",
       nome: "Produto 4",
       title: "Mochila Mudita",
       descricao: "Mudita significa Alegria. Mochila ideal para quem tem...",
