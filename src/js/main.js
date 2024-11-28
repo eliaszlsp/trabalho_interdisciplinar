@@ -8,14 +8,12 @@ import { sobreNos } from "./componentes/sobreNos.js";
 import { upCycle } from "./componentes/upcycle.js";
 import { fraseDeAutotidade } from "./componentes/fraseAutoridade.js";
 
-// Função para criar o header
 const criarHeader = () => {
   const header = document.createElement("header");
   header.innerHTML = elementHeader();
   document.body.appendChild(header);
 };
 
-// Função para criar a seção hero
 const criarSectionHero = () => {
   const section = document.createElement("section");
   section.setAttribute("id", "hero");
@@ -25,58 +23,21 @@ const criarSectionHero = () => {
   headerIteracao();
 };
 
-// Função para criar o main
 const criarMain = () => {
   const main = document.createElement("main");
   document.body.appendChild(main);
 
-  // Função para observar e carregar conteúdo
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const section = entry.target;
-          switch (section.id) {
-            case "secao_sobre_nos":
-              section.innerHTML = sobreNos();
-              observer.unobserve(section); // Para de observar após carregar
-              break;
-
-            case "secao_upcycle":
-              section.innerHTML = upCycle();
-              observer.unobserve(section);
-              break;
-
-            case "secao_nossa_causa":
-              section.innerHTML = nossaCausa();
-              nossaCausaIteracao(section);
-              observer.unobserve(section);
-              break;
-
-            case "produtos-Section":
-              section.innerHTML = elementProdutos();
-              observer.unobserve(section);
-              cardsDisplay();
-              scroll();
-              cardsInfo();
-              break;
-
-            default:
-              break;
-          }
-        }
-      });
-    },
-    { root: null, rootMargin: "200px", threshold: 0.1 } // Margem para pré-carregar
-  );
-
-  // Função para criar seções genéricas
-  function criarSecao(id) {
-    const section = document.createElement("section");
-    section.setAttribute("id", id);
-    main.appendChild(section);
-    observer.observe(section); // Adiciona a seção ao observer
+  function criarSecoes(id, componente) {
+    const secao = document.createElement("section");
+    secao.setAttribute("id", id);
+    secao.innerHTML = componente;
+    main.appendChild(secao);
   }
+
+  function criarSecaoSobreNos() {
+    criarSecoes("secao_sobre_nos", sobreNos());
+  }
+
   function criarFraseDeAutoridade(svgPath) {
     const section = document.createElement("section");
     section.setAttribute("class", "fraseAutoridade");
@@ -84,12 +45,37 @@ const criarMain = () => {
     main.appendChild(section);
   }
 
-  criarSecao("secao_sobre_nos");
+  function criarSecaoUpcycle() {
+    criarSecoes("secao_upcycle", upCycle());
+  }
+
+  function criarSecaoNossaCausa() {
+    const sectionNossaCausa = document.createElement("section");
+    sectionNossaCausa.setAttribute("id", "secao_nossa_causa");
+    sectionNossaCausa.innerHTML = nossaCausa();
+    main.appendChild(sectionNossaCausa);
+
+    nossaCausaIteracao(sectionNossaCausa);
+  }
+
+  function criarSecaoProdutos() {
+    criarSecoes("produtos-Section", elementProdutos());
+  }
+
+  // Chamando as funções para criar as seções
+  criarSecaoSobreNos();
   criarFraseDeAutoridade("/src/imagens/animacaoFrase1.svg");
-  criarSecao("secao_upcycle");
-  criarSecao("secao_nossa_causa");
+  criarSecaoUpcycle();
+
+  criarSecaoNossaCausa();
+
   criarFraseDeAutoridade("/src/imagens/animacaoFrase2.svg");
-  criarSecao("produtos-Section");
+  criarSecaoProdutos();
+
+  // Configuração de cards
+  cardsDisplay();
+  scroll();
+  cardsInfo();
 };
 
 const criarFooter = () => {
