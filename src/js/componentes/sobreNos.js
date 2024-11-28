@@ -38,7 +38,7 @@ function sobreNos() {
       </div>
 
       <div class="container_img_Sobre_nos">
-        <img src="src/imagens/nossaHistoria.jpg" alt="Imagem_Sobre_nos" />
+        <img src="src/imagens/nossaHistoria.webp" alt="Imagem_Sobre_nos" />
       </div>
       <h1 id="titulo_Sobre_nos_mobile">Nossa história</h1>
     </div>
