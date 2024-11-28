@@ -2,7 +2,7 @@ function sobreNos() {
   return `  
     <div id="Sobre_nos">
       <div class="texto_sustentavel_Sobre_nos">
-        <h1 id="titulo_Sobre_nos">Nossa história</h1>
+        <h1 id="titulo_Sobre_nos">Sobre nós</h1>
         <div>
           <p>Em 2020, a Cósmica começou.</p>
 

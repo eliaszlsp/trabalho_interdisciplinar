@@ -30,52 +30,68 @@ const criarMain = () => {
   const main = document.createElement("main");
   document.body.appendChild(main);
 
-  // Seção Sobre Nós
-  const sectionSobreNos = document.createElement("section");
-  sectionSobreNos.setAttribute("id", "secao_sobre_nos");
-  sectionSobreNos.innerHTML = sobreNos();
-  main.appendChild(sectionSobreNos);
-  // frase de autoridade
+  // Função para observar e carregar conteúdo
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const section = entry.target;
+          switch (section.id) {
+            case "secao_sobre_nos":
+              section.innerHTML = sobreNos();
+              observer.unobserve(section); // Para de observar após carregar
+              break;
 
-  const section1 = document.createElement("section");
-  section1.setAttribute("class", "fraseAutoridade");
-  const svgPath1 = "/src/imagens/animacaoFrase1.svg";
-  section1.innerHTML = fraseDeAutotidade(svgPath1);
-  main.appendChild(section1);
+            case "secao_upcycle":
+              section.innerHTML = upCycle();
+              observer.unobserve(section);
+              break;
 
-  // Seção Upcycle
-  const sectionUpcycle = document.createElement("section");
-  sectionUpcycle.setAttribute("id", "secao_upcycle");
-  sectionUpcycle.innerHTML = upCycle();
-  main.appendChild(sectionUpcycle);
+            case "secao_nossa_causa":
+              section.innerHTML = nossaCausa();
+              nossaCausaIteracao(section);
+              observer.unobserve(section);
+              break;
 
-  // Seção Nossa Causa
-  const sectionNossaCausa = document.createElement("section");
-  sectionNossaCausa.setAttribute("id", "secao_nossa_causa");
-  sectionNossaCausa.innerHTML = nossaCausa();
-  main.appendChild(sectionNossaCausa);
-  nossaCausaIteracao();
+            case "produtos-Section":
+              section.innerHTML = elementProdutos();
+              observer.unobserve(section);
+              cardsDisplay();
+              scroll();
+              cardsInfo();
+              break;
 
-  // frase de autoridade2
-  const section = document.createElement("section");
-  section.setAttribute("class", "fraseAutoridade");
-  const svgPath2 = "/src/imagens/animacaoFrase2.svg";
-  section.innerHTML = fraseDeAutotidade(svgPath2);
-  main.appendChild(section);
+            default:
+              break;
+          }
+        }
+      });
+    },
+    { root: null, rootMargin: "200px", threshold: 0.1 } // Margem para pré-carregar
+  );
 
-  // Seção Produtos
-  const sectionProdutos = document.createElement("section");
-  sectionProdutos.setAttribute("id", "produtos-Section");
-  sectionProdutos.innerHTML = elementProdutos();
-  main.appendChild(sectionProdutos);
+  // Função para criar seções genéricas
+  function criarSecao(id) {
+    const section = document.createElement("section");
+    section.setAttribute("id", id);
+    main.appendChild(section);
+    observer.observe(section); // Adiciona a seção ao observer
+  }
+  function criarFraseDeAutoridade(svgPath) {
+    const section = document.createElement("section");
+    section.setAttribute("class", "fraseAutoridade");
+    section.innerHTML = fraseDeAutotidade(svgPath);
+    main.appendChild(section);
+  }
 
-  // Configuração de cards
-  cardsDisplay();
-  scroll();
-  cardsInfo();
+  criarSecao("secao_sobre_nos");
+  criarFraseDeAutoridade("/src/imagens/animacaoFrase1.svg");
+  criarSecao("secao_upcycle");
+  criarSecao("secao_nossa_causa");
+  criarFraseDeAutoridade("/src/imagens/animacaoFrase2.svg");
+  criarSecao("produtos-Section");
 };
 
-// Função para criar o footer
 const criarFooter = () => {
   const footer = document.createElement("footer");
   footer.setAttribute("class", "footer");
@@ -83,7 +99,6 @@ const criarFooter = () => {
   document.body.appendChild(footer);
 };
 
-// Função para criar o botão flutuante do WhatsApp
 const criarAnchor = () => {
   const anchor = document.createElement("a");
   anchor.href = "https://wa.me/5547997873644";
@@ -97,8 +112,6 @@ const criarAnchor = () => {
 
   document.body.appendChild(anchor);
 };
-
-// Função principal para montar o layout
 const montarLayout = () => {
   criarHeader();
   criarSectionHero();

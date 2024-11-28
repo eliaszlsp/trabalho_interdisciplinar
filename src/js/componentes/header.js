@@ -16,11 +16,11 @@ function elementHeader() {
           <div class="linha"></div>
         </div>
         <ul class="navbar-menu hamburger-nav">
+        <li><a class="menu" href="#">Home</a></li>
           <li><a class="menu" href="#Sobre_nos">Sobre Nós</a></li>
-          <li><a class="menu" href="#Upcycle">Upcycle</a></li>
-          <li><a class="menu" href="#">Home</a></li>
-          <li><a class="menu" href="#produtos-Section">Produtos</a></li>
+          <li><a class="menu" href="#Upcycle">Quem sou eu</a></li>
           <li><a class="menu" href="#Nossa_causa">Nossa causa</a></li>
+          <li><a class="menu" href="#produtos-Section">Produtos</a></li>
         </ul>
       </nav>`;
 }
@@ -40,7 +40,6 @@ function headerIteracao() {
   const logoNavResponsivo = document.querySelector("#logo-menu-responsivo");
   // Escuta o evento de scroll
   window.addEventListener("scroll", () => {
-
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const finalDoElento = hero.getBoundingClientRect().bottom;
 

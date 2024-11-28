@@ -1,42 +1,48 @@
 const infosCards = [
-    {
-      imagem: "src/imagens/cards/Bolsas-juntas.JPEG",
-      nome: "Produto 1",
-      title: "Bolsas Cosmica",
-      descricao: "A linha de bolsas da Cósmica Upcycle é um verdadeiro...",
-    },
-    {
-      imagem: "src/imagens/cards/127 - CHEILAWIGGERS - 849A0239.jpg",
-      nome: "Produto 2",
-      title: "Mochila Upeksha",
-      descricao: "Upeksha significa equanimidade. Mochila ideal para...",
-    },
-    {
-      imagem: "src/imagens/cards/IMG_1286 (1).jpg",
-      nome: "Produto 3",
-      title: "Basic bag",
-      descricao: "A Basic bag é a bolsa ideal para quem gosta de sair...",
-    },
-    {
-      imagem: "src/imagens/cards/Mochila.JPEG",
-      nome: "Produto 4",
-      title: "Mochila Mudita",
-      descricao: "Mudita significa Alegria. Mochila ideal para quem tem...",
-    },
-    {
-      imagem: "src/imagens/cards/IMG_5863.jpg",
-      nome: "Produto 5",
-      title: "Pochetes",
-      descricao: "A pochete Luna é a bolsa ideal para quem gosta de sair...",
-    },
-    {
-      imagem: "src/imagens/cards/Upcycle afetivo.png",
-      nome: "Produto 6",
-      title: "Upcycle Afetivo",
-      descricao: "A Cósmica Upcycle transforma peças antigas em novos...",
-    },
-  ];
-  function cardsDisplay() {
+  {
+    imagem: "src/imagens/cards/Bolsas-juntas.JPEG",
+    nome: "Produto 1",
+    title: "Bolsas Cosmica",
+    descricao: "A linha de bolsas da Cósmica Upcycle é um verdadeiro...",
+    link: "#",
+  },
+  {
+    imagem: "src/imagens/cards/127 - CHEILAWIGGERS - 849A0239.jpg",
+    nome: "Produto 2",
+    title: "Mochila Upeksha",
+    descricao: "Upeksha significa equanimidade. Mochila ideal para...",
+    link: "#",
+  },
+  {
+    imagem: "src/imagens/cards/IMG_1286 (1).jpg",
+    nome: "Produto 3",
+    title: "Basic bag",
+    descricao: "A Basic bag é a bolsa ideal para quem gosta de sair...",
+    link: "#",
+  },
+  {
+    imagem: "src/imagens/cards/Mochila.JPEG",
+    nome: "Produto 4",
+    title: "Mochila Mudita",
+    descricao: "Mudita significa Alegria. Mochila ideal para quem tem...",
+    link: "#",
+  },
+  {
+    imagem: "src/imagens/cards/IMG_5863.jpg",
+    nome: "Produto 5",
+    title: "Pochetes",
+    descricao: "A pochete Luna é a bolsa ideal para quem gosta de sair...",
+    link: "#",
+  },
+  {
+    imagem: "src/imagens/cards/Upcycle afetivo.png",
+    nome: "Produto 6",
+    title: "Upcycle Afetivo",
+    descricao: "A Cósmica Upcycle transforma peças antigas em novos...",
+    link: "#",
+  },
+];
+function cardsDisplay() {
   const produtos = document.querySelector("#produtos");
   infosCards.forEach((card) => {
     const produto = document.createElement("div");
@@ -54,7 +60,7 @@ const infosCards = [
   });
   return produtos;
 }
-function scroll(){
+function scroll() {
   const cards = document.querySelector(".produtos-wrapper");
   const nextButton = document.getElementById("next");
   nextButton.addEventListener("click", () => {
@@ -109,11 +115,11 @@ const maisCards = [
     text: "A Cósmica Upcycle transforma peças antigas em novos produtos carregados de memória e significado. Ao preferir descartar itens de valor sentimental, como uma calça de uma avó, a empresa resgata esses materiais e os transforma em mochilas, bolsas e outros acessórios. Cada peça passa por um processo cuidadoso, onde o valor emocional é preservado, mas também ganha nova vida e funcionalidade. A Cósmica Upcycle valoriza a história por trás de cada material, criando produtos que não são apenas sustentáveis, mas também repletos de afeto. É uma forma de honrar o passado enquanto se constrói um futuro mais consciente e cheio de significado.",
   },
 ];
-function cardsInfo(){
+function cardsInfo() {
   const produtoButton = document.querySelectorAll(".saiba-mais");
   const textProduct = document.querySelectorAll(".product-text");
   const product = document.querySelectorAll(".produto-info");
-  
+
   produtoButton.forEach((button, index) => {
     button.addEventListener("click", (event) => {
       event.preventDefault();
@@ -135,4 +141,4 @@ function cardsInfo(){
     });
   });
 }
-export {cardsDisplay, scroll, cardsInfo}
+export { cardsDisplay, scroll, cardsInfo };
